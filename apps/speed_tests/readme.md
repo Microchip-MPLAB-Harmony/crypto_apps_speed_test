@@ -4,11 +4,9 @@ Extensible crypto module speed test framework.
 # Description
 This demonstration exercises several cryptographic functions, including TDES, DES, SHA 128-512, AES, and RSA, to verify that the software or hardware is performing correctly and to determine the speed of each function for various data sizes. Data is taken from Microchip example code, NSA test vectors, and other sources.
 # Building the Application
-To build the application, the project corresponding to the test hardware must be opened in MPLAB X IDE. The following table lists projects and supported configurations. The parent folder for these files is crypto/apps/encrypt_decrypt/firmware.
+To build the application, the project corresponding to the test hardware must be opened in MPLAB X IDE. The following table lists projects and supported configurations. The parent folder for these projects is crypto_apps_speed_test\apps\speed_tests\firmware.
 
 ## MPLAB X IDE Projects
-This table lists the name and location of the MPLAB X IDE project folder for the demonstration.
-
 | Project Name | BSP Used | Description |
 | --- | --- | ---|
 | sam_e54_xplained_pro_hw.X | sam_e54_xplained_pro | SpeedTest project using the SAME54 and hardware cryptography|
@@ -20,14 +18,14 @@ This table lists the name and location of the MPLAB X IDE project folder for the
 | sam_l21_xplained_pro_hw.X | sam_l21_xplained_pro | SpeedTest project using the SAML21 and hardware cryptography|
 | sam_l21_xplained_pro_sw.X | sam_l21_xplained_pro | SpeedTest project using the SAML21 and software cryptography|
 
-The application is built by using the standard MPLAB X IDE buttons.
+Each application is built by using the standard MPLAB X IDE buttons.
 
 # Configuring the Hardware
 Refer to the following pages to configure the hardware:
-* [SAM E54 Xplained Pro](../../../crypto/wiki/Configuring-the-SAM-E54-Xplained-Pro-Board)
-* [SAM E70 Xplained Ultra](../../../crypto/wiki/Configuring-the-SAM-E70-Xplained-Ultra-Board)
-* [SAM L11 Xplained Ultra](../../../crypto/wiki/Configuring-the-SAM-L11-Xplained-Pro-Board)
-* [SAM L21 Xplained Pro](../../../crypto/wiki/Configuring-the-SAM-L21-Xplained-Pro-Board)
+* [SAM E54 Xplained Pro](https://github.com/Microchip-MPLAB-Harmony/crypto/wiki/Configuring-the-SAM-E54-Xplained-Pro-Board)
+* [SAM E70 Xplained Ultra](https://github.com/Microchip-MPLAB-Harmony/crypto/wiki/Configuring-the-SAM-E70-Xplained-Ultra-Board)
+* [SAM L11 Xplained Ultra](https://github.com/Microchip-MPLAB-Harmony/crypto/wiki/Configuring-the-SAM-L11-Xplained-Pro-Board)
+* [SAM L21 Xplained Pro](https://github.com/Microchip-MPLAB-Harmony/crypto/wiki/Configuring-the-SAM-L21-Xplained-Pro-Board)
 
 
 # Running the Demonstration
