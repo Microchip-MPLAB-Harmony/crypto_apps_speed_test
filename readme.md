@@ -33,7 +33,7 @@ To clone or download these application from Github,go to the [main page of this 
 | apps       | SpeedTest example applications    |
 | docs       | Applications help documentation         |
 
-Building and running a SpeedTest application is described in [these instructions](./apps/docs/readme.md).
+Building and running a SpeedTest application is described in [these instructions](./apps/speed_tests/readme.md).
 ____
 
 [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_uart/blob/master/mplab_harmony_license.md)
