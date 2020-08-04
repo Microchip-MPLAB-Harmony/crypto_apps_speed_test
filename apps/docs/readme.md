@@ -24,10 +24,10 @@ The application is built by using the standard MPLAB X IDE buttons.
 
 # Configuring the Hardware
 Refer to the following pages to configure the hardware:
-* [SAM E70 Xplained Ultra](https://github.com/Microchip-MPLAB-Harmony/crypto/wiki/Configuring-the-SAM-E70-Xplained-Ultra-Board)
-* [SAM E54 Xplained Pro](https://github.com/Microchip-MPLAB-Harmony/crypto/wiki/Configuring-the-SAM-E54-Xplained-Pro-Board)
-* [SAM A5D2 Xplained Ultra](https://github.com/Microchip-MPLAB-Harmony/crypto/wiki/Configuring-the-SAM-A5D2-Xplained-Ultra-Board)
-* [SAM L21 Xplained Pro](https://github.com/Microchip-MPLAB-Harmony/crypto/wiki/Configuring-the-SAM-L21-Xplained-Pro-Board)
+* [SAM E54 Xplained Pro](../../../crypto/wiki/Configuring-the-SAM-E54-Xplained-Pro-Board)
+* [SAM E70 Xplained Ultra](../../../crypto/wiki/Configuring-the-SAM-E70-Xplained-Ultra-Board)
+* [SAM L11 Xplained Ultra](../../../crypto/wiki/Configuring-the-SAM-L11-Xplained-Pro-Board)
+* [SAM L21 Xplained Pro](../../../crypto/wiki/Configuring-the-SAM-L21-Xplained-Pro-Board)
 
 
 # Running the Demonstration
