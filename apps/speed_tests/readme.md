@@ -48,6 +48,6 @@ The second phase repeats each data set multiple times to get a statistical avera
 
 Test results output lines begin with ">>". The 2nd phase output is in CSV file format and can be imported to Excel, including any error or warning messages. Each project will have different timing results.
 
-An example is shown in the following figure. 
-![Results (TODO FIXME)](images/EncryptDecryptResults.png)
+An example result is shown in  
+[this text file](../docs/images/SAML21_example_output.txt).
 

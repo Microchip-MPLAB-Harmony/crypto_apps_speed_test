@@ -1,0 +1,419 @@
+
+ Microchip benchMark test suite
+ Application created Aug  4 2020 16:31:05 initialized!
+
+Benchmark SAML21 XPlained Ultra ATSAML21J18B ($ld:$)
+Override test iterations : 1
+verifyByGoldenCiphertext : true
+verifyByDecryption       : true
+Verbose : 1
+Encrypt/decrypt all data to demonstrate correct operation.
+-v WOLF AES CFB 128 **** warning (1): ** can't verify cipher: no golden data
+>> WOLF AES CFB 128 enc=16         29 us on 1 iterations (29.000 us average)
+-v WOLF AES CFB 192 **** warning (1): ** can't verify cipher: no golden data
+>> WOLF AES CFB 192 enc=16         30 us on 1 iterations (30.000 us average)
+-v WOLF AES CFB 256 **** warning (1): ** can't verify cipher: no golden data
+>> WOLF AES CFB 256 enc=16         31 us on 1 iterations (31.000 us average)
+-v WOLF AES CFB 128 **** warning (1): ** can't verify cipher: no golden data
+>> WOLF AES CFB 128 enc=64         80 us on 1 iterations (80.000 us average)
+-v WOLF AES CFB 192 **** warning (1): ** can't verify cipher: no golden data
+>> WOLF AES CFB 192 enc=64         83 us on 1 iterations (83.000 us average)
+-v WOLF AES CFB 256 **** warning (1): ** can't verify cipher: no golden data
+>> WOLF AES CFB 256 enc=64         86 us on 1 iterations (86.000 us average)
+>> WOLF AES CFB 128 enc=64         81 us on 1 iterations (81.000 us average)
+>> WOLF AES CFB 192 enc=64         84 us on 1 iterations (84.000 us average)
+>> WOLF AES CFB 256 enc=64         87 us on 1 iterations (87.000 us average)
+-v WOLF AES CBC 128 **** warning (1): can't verify cipher: no golden data
+>> WOLF AES CBC 128 enc=16         23 us on 1 iterations (23.000 us average)
+>> WOLF AES CBC 128 enc=16         23 us on 1 iterations (23.000 us average)
+-v WOLF AES CBC 128 **** warning (1): can't verify cipher: no golden data
+>> WOLF AES CBC 128 enc=384        114 us on 1 iterations (114.000 us average)
+-v WOLF AES CBC 128 **** warning (1): can't verify cipher: no golden data
+>> WOLF AES CBC 128 enc=32         37 us on 1 iterations (37.000 us average)
+-v WOLF AES CBC 192 **** warning (1): can't verify cipher: no golden data
+>> WOLF AES CBC 192 enc=384        119 us on 1 iterations (119.000 us average)
+-v WOLF AES CBC 256 **** warning (1): can't verify cipher: no golden data
+>> WOLF AES CBC 256 enc=384        125 us on 1 iterations (125.000 us average)
+>> WOLF AES CTR 128 enc=64         34 us on 1 iterations (34.000 us average)
+>> WOLF AES CTR 192 enc=64         35 us on 1 iterations (35.000 us average)
+>> WOLF AES CTR 256 enc=64         36 us on 1 iterations (36.000 us average)
+>> WOLF AES GCM 128 enc=32        105 us on 1 iterations (105.000 us average)
+>> WOLF AES GCM 128 enc=16         81 us on 1 iterations (81.000 us average)
+-v WOLF AES GCM 128 **** warning (1): can't verify cipher: no golden data
+>> WOLF AES GCM 128 enc=0         76 us on 1 iterations (76.000 us average)
+-v WOLF AES GCM 128 **** warning (1): can't verify cipher: no golden data
+>> WOLF AES GCM 128 enc=2944        734 us on 1 iterations (734.000 us average)
+-v WOLF AES GCM 128 **** warning (1): can't verify cipher: no golden data
+>> WOLF AES GCM 128 enc=2944        746 us on 1 iterations (746.000 us average)
+>> WOLF AES GCM 128 enc=16        105 us on 1 iterations (105.000 us average)
+>> WOLF AES GCM 192 enc=60        160 us on 1 iterations (160.000 us average)
+>> WOLF AES GCM 256 enc=60        119 us on 1 iterations (119.000 us average)
+>> WOLF AES CCM enc=23        108 us on 1 iterations (108.000 us average)
+>> WOLF AES CCM enc=24        106 us on 1 iterations (106.000 us average)
+>> WOLF AES CCM enc=25        109 us on 1 iterations (109.000 us average)
+>> WOLF AES CCM enc=19        106 us on 1 iterations (106.000 us average)
+>> WOLF AES CCM enc=20        106 us on 1 iterations (106.000 us average)
+>> WOLF AES CCM enc=21        108 us on 1 iterations (108.000 us average)
+>> WOLF AES CCM enc=23        110 us on 1 iterations (110.000 us average)
+>> WOLF AES CCM enc=23        108 us on 1 iterations (108.000 us average)
+>> WOLF AES CCM enc=24        106 us on 1 iterations (106.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF SHA 256 enc=11        258 us on 1 iterations (258.000 us average)
+>> WOLF SHA 128 enc=3        133 us on 1 iterations (133.000 us average)
+>> WOLF SHA 128 enc=56        241 us on 1 iterations (241.000 us average)
+>> WOLF SHA 224 enc=3        244 us on 1 iterations (244.000 us average)
+>> WOLF SHA 224 enc=56        462 us on 1 iterations (462.000 us average)
+>> WOLF SHA 256 enc=3        258 us on 1 iterations (258.000 us average)
+>> WOLF SHA 256 enc=56        487 us on 1 iterations (487.000 us average)
+>> WOLF SHA 256 enc=112        479 us on 1 iterations (479.000 us average)
+>> WOLF SHA 384 enc=3        827 us on 1 iterations (827.000 us average)
+>> WOLF SHA 384 enc=112       1636 us on 1 iterations (1636.000 us average)
+>> WOLF SHA 512 enc=3        842 us on 1 iterations (842.000 us average)
+>> WOLF SHA 512 enc=112       1639 us on 1 iterations (1639.000 us average)
+>> WOLF SHA 256 enc=44        259 us on 1 iterations (259.000 us average)
+>> WOLF SHA 256 enc=45        259 us on 1 iterations (259.000 us average)
+>> WOLF SHA 256 enc=46        259 us on 1 iterations (259.000 us average)
+>> WOLF SHA 256 enc=47        259 us on 1 iterations (259.000 us average)
+>> WOLF SHA 256 enc=48        259 us on 1 iterations (259.000 us average)
+>> WOLF SHA 256 enc=49        259 us on 1 iterations (259.000 us average)
+>> WOLF SHA 256 enc=50        259 us on 1 iterations (259.000 us average)
+>> WOLF SHA 256 enc=51        260 us on 1 iterations (260.000 us average)
+>> WOLF SHA 256 enc=52        260 us on 1 iterations (260.000 us average)
+>> WOLF SHA 256 enc=53        271 us on 1 iterations (271.000 us average)
+>> WOLF SHA 256 enc=54        260 us on 1 iterations (260.000 us average)
+>> WOLF SHA 256 enc=55        260 us on 1 iterations (260.000 us average)
+>> WOLF SHA 256 enc=56        487 us on 1 iterations (487.000 us average)
+>> WOLF SHA 256 enc=57        475 us on 1 iterations (475.000 us average)
+>> WOLF SHA 256 enc=58        475 us on 1 iterations (475.000 us average)
+>> WOLF SHA 256 enc=59        475 us on 1 iterations (475.000 us average)
+>> WOLF SHA 256 enc=60        476 us on 1 iterations (476.000 us average)
+>> WOLF SHA 256 enc=61        487 us on 1 iterations (487.000 us average)
+>> WOLF SHA 256 enc=62        476 us on 1 iterations (476.000 us average)
+>> WOLF SHA 256 enc=63        476 us on 1 iterations (476.000 us average)
+>> WOLF SHA 256 enc=64        475 us on 1 iterations (475.000 us average)
+>> WOLF SHA 256 enc=460       1797 us on 1 iterations (1797.000 us average)
+>> WOLF SHA 256 enc=461       1797 us on 1 iterations (1797.000 us average)
+>> WOLF SHA 256 enc=462       1786 us on 1 iterations (1786.000 us average)
+>> WOLF SHA 256 enc=463       1786 us on 1 iterations (1786.000 us average)
+>> WOLF SHA 256 enc=464       1797 us on 1 iterations (1797.000 us average)
+>> WOLF SHA 256 enc=465       1797 us on 1 iterations (1797.000 us average)
+>> WOLF SHA 256 enc=466       1797 us on 1 iterations (1797.000 us average)
+>> WOLF SHA 256 enc=467       1797 us on 1 iterations (1797.000 us average)
+>> WOLF SHA 256 enc=468       1786 us on 1 iterations (1786.000 us average)
+>> WOLF SHA 256 enc=469       1786 us on 1 iterations (1786.000 us average)
+>> WOLF SHA 256 enc=470       1797 us on 1 iterations (1797.000 us average)
+>> WOLF SHA 256 enc=471       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=472       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=473       1797 us on 1 iterations (1797.000 us average)
+>> WOLF SHA 256 enc=474       1786 us on 1 iterations (1786.000 us average)
+>> WOLF SHA 256 enc=475       1786 us on 1 iterations (1786.000 us average)
+>> WOLF SHA 256 enc=476       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=477       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=478       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=479       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=480       1787 us on 1 iterations (1787.000 us average)
+>> WOLF SHA 256 enc=481       1787 us on 1 iterations (1787.000 us average)
+>> WOLF SHA 256 enc=482       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=483       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=484       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=485       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=486       1787 us on 1 iterations (1787.000 us average)
+>> WOLF SHA 256 enc=487       1787 us on 1 iterations (1787.000 us average)
+>> WOLF SHA 256 enc=488       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=489       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=490       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=491       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=492       1787 us on 1 iterations (1787.000 us average)
+>> WOLF SHA 256 enc=493       1787 us on 1 iterations (1787.000 us average)
+>> WOLF SHA 256 enc=494       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=495       1799 us on 1 iterations (1799.000 us average)
+>> WOLF SHA 256 enc=496       1799 us on 1 iterations (1799.000 us average)
+>> WOLF SHA 256 enc=497       1787 us on 1 iterations (1787.000 us average)
+>> WOLF SHA 256 enc=498       1787 us on 1 iterations (1787.000 us average)
+>> WOLF SHA 256 enc=499       1798 us on 1 iterations (1798.000 us average)
+>> WOLF SHA 256 enc=500       1799 us on 1 iterations (1799.000 us average)
+>> WOLF SHA 256 enc=501       1799 us on 1 iterations (1799.000 us average)
+>> WOLF SHA 256 enc=502       1799 us on 1 iterations (1799.000 us average)
+>> WOLF SHA 256 enc=503       1788 us on 1 iterations (1788.000 us average)
+>> WOLF SHA 256 enc=504       2003 us on 1 iterations (2003.000 us average)
+>> WOLF SHA 256 enc=505       2003 us on 1 iterations (2003.000 us average)
+>> WOLF SHA 256 enc=506       2003 us on 1 iterations (2003.000 us average)
+>> WOLF SHA 256 enc=507       2003 us on 1 iterations (2003.000 us average)
+>> WOLF SHA 256 enc=508       2003 us on 1 iterations (2003.000 us average)
+>> WOLF SHA 256 enc=509       2003 us on 1 iterations (2003.000 us average)
+>> WOLF SHA 256 enc=510       2003 us on 1 iterations (2003.000 us average)
+>> WOLF SHA 256 enc=511       2003 us on 1 iterations (2003.000 us average)
+>> WOLF SHA 256 enc=512       2003 us on 1 iterations (2003.000 us average)
+>> WOLF SHA 256 enc=537       2005 us on 1 iterations (2005.000 us average)
+>> WOLF SHA 256 enc=562       2006 us on 1 iterations (2006.000 us average)
+>> WOLF SHA 256 enc=587       2222 us on 1 iterations (2222.000 us average)
+>> WOLF SHA 256 enc=612       2235 us on 1 iterations (2235.000 us average)
+>> WOLF SHA 256 enc=637       2451 us on 1 iterations (2451.000 us average)
+>> WOLF SHA 256 enc=662       2452 us on 1 iterations (2452.000 us average)
+>> WOLF SHA 256 enc=687       2453 us on 1 iterations (2453.000 us average)
+>> WOLF SHA 256 enc=712       2670 us on 1 iterations (2670.000 us average)
+>> WOLF SHA 256 enc=737       2671 us on 1 iterations (2671.000 us average)
+>> WOLF SHA 256 enc=762       2887 us on 1 iterations (2887.000 us average)
+>> WOLF SHA 256 enc=787       2888 us on 1 iterations (2888.000 us average)
+>> WOLF SHA 256 enc=812       2889 us on 1 iterations (2889.000 us average)
+>> WOLF SHA 256 enc=837       3106 us on 1 iterations (3106.000 us average)
+>> WOLF SHA 256 enc=862       3107 us on 1 iterations (3107.000 us average)
+>> WOLF SHA 256 enc=887       3108 us on 1 iterations (3108.000 us average)
+>> WOLF SHA 256 enc=912       3325 us on 1 iterations (3325.000 us average)
+>> WOLF SHA 256 enc=937       3337 us on 1 iterations (3337.000 us average)
+>> WOLF SHA 256 enc=962       3543 us on 1 iterations (3543.000 us average)
+>> WOLF SHA 256 enc=987       3543 us on 1 iterations (3543.000 us average)
+>> WOLF SHA 256 enc=1012       3545 us on 1 iterations (3545.000 us average)
+>> WOLF SHA 256 enc=1037       3761 us on 1 iterations (3761.000 us average)
+>> WOLF SHA 256 enc=1062       3773 us on 1 iterations (3773.000 us average)
+>> WOLF SHA 256 enc=1087       3979 us on 1 iterations (3979.000 us average)
+>> WOLF SHA 256 enc=1112       3991 us on 1 iterations (3991.000 us average)
+>> WOLF SHA 256 enc=1137       3981 us on 1 iterations (3981.000 us average)
+>> WOLF SHA 256 enc=1162       4209 us on 1 iterations (4209.000 us average)
+>> WOLF SHA 256 enc=1187       4198 us on 1 iterations (4198.000 us average)
+>> WOLF SHA 256 enc=1212       4426 us on 1 iterations (4426.000 us average)
+>> WOLF SHA 256 enc=1237       4428 us on 1 iterations (4428.000 us average)
+>> WOLF SHA 256 enc=1262       4428 us on 1 iterations (4428.000 us average)
+>> WOLF SHA 256 enc=1287       4645 us on 1 iterations (4645.000 us average)
+>> WOLF SHA 256 enc=1312       4646 us on 1 iterations (4646.000 us average)
+>> WOLF SHA 256 enc=1337       4863 us on 1 iterations (4863.000 us average)
+>> WOLF SHA 256 enc=1362       4864 us on 1 iterations (4864.000 us average)
+>> WOLF SHA 256 enc=1387       4865 us on 1 iterations (4865.000 us average)
+>> WOLF SHA 256 enc=1412       5081 us on 1 iterations (5081.000 us average)
+>> WOLF SHA 256 enc=1437       5071 us on 1 iterations (5071.000 us average)
+>> WOLF SHA 256 enc=1462       5084 us on 1 iterations (5084.000 us average)
+>> WOLF SHA 256 enc=1487       5300 us on 1 iterations (5300.000 us average)
+>> WOLF SHA 256 enc=1512       5301 us on 1 iterations (5301.000 us average)
+>> WOLF SHA 256 enc=1537       5518 us on 1 iterations (5518.000 us average)
+>> WOLF SHA 256 enc=2537       8804 us on 1 iterations (8804.000 us average)
+>> WOLF SHA 256 enc=3537      12318 us on 1 iterations (12318.000 us average)
+>> WOLF SHA 256 enc=4537      15819 us on 1 iterations (15819.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+>> WOLF AES ECB 128 enc=16         17 us on 1 iterations (17.000 us average)
+-v WOLF AES ECB 128 **** warning (1): can't verify cipher: no golden data
+>> WOLF AES ECB 128 enc=1024        228 us on 1 iterations (228.000 us average)
+-v WOLF AES ECB 128 **** warning (1): can't verify cipher: no golden data
+>> WOLF AES ECB 128 enc=2048        455 us on 1 iterations (455.000 us average)
+-v WOLF AES ECB 128 **** warning (1): can't verify cipher: no golden data
+>> WOLF AES ECB 128 enc=5120       1098 us on 1 iterations (1098.000 us average)
+>> WOLF DES3 CBC enc=48        934 us on 1 iterations (934.000 us average)
+>> WOLF DES3 CBC enc=48        931 us on 1 iterations (931.000 us average)
+>> WOLF DES3 CBC enc=448       8622 us on 1 iterations (8622.000 us average)
+
+Tests attempted :188
+Tests successful:188
+
+Benchmark SAML21 XPlained Ultra ATSAML21J18B ($ld:$)
+Default iterations will be used for all tests
+verifyByGoldenCiphertext : false
+verifyByDecryption       : false
+Verbose : 1
+-----BEGIN TIMED TESTING-----
+sep=,
+>>,Processor,Platform,Configuration,Accelerator,Optimized,Build,Fcpu,Ftimer,Domain,Handler,DataSize,IterateEnc,StartTEnc,StopTEnc,IterateDec,StartTDec,StopTDec,Wolf Err,Warning,Error
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_NULL","WOLF AES CFB 128",16,1000,25637237,25887412,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_NULL","WOLF AES CFB 192",16,1000,26276361,26534562,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_NULL","WOLF AES CFB 256",16,1000,26726441,26998248,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_NULL","WOLF AES CFB 128",64,1000,27190056,28055453,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_NULL","WOLF AES CFB 192",64,1000,28247297,29144895,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_NULL","WOLF AES CFB 256",64,1000,29336797,30277396,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CFB","WOLF AES CFB 128",64,1000,30469285,31342735,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CFB","WOLF AES CFB 192",64,1000,31533551,32439325,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CFB","WOLF AES CFB 256",64,1000,32630165,33578816,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CBC","WOLF AES CBC 128",16,1000,33769659,33941958,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CBC","WOLF AES CBC 128",16,1000,34132813,34305108,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CBC","WOLF AES CBC 128",384,1000,34495951,35745965,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CBC","WOLF AES CBC 128",32,1000,35937954,36155765,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CBC","WOLF AES CBC 192",384,1000,36346520,37662090,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CBC","WOLF AES CBC 256",384,1000,37853988,39237124,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CTR","WOLF AES CTR 128",64,1000,39429030,39732424,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CTR","WOLF AES CTR 192",64,1000,39923154,40246171,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CTR","WOLF AES CTR 256",64,1000,40436928,40774112,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_GCM","WOLF AES GCM 128",32,1000,40965619,41993361,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_GCM","WOLF AES GCM 128",16,1000,42184835,43061841,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_GCM","WOLF AES GCM 128",0,1000,43253452,44072081,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_GCM","WOLF AES GCM 128",2944,100,44269553,45144799,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_GCM","WOLF AES GCM 128",2944,100,45345579,46220846,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_GCM","WOLF AES GCM 128",16,100,46413493,46530495,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_GCM","WOLF AES GCM 192",60,100,46721147,46904071,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_GCM","WOLF AES GCM 256",60,100,47094561,47228095,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CCM","WOLF AES CCM",23,1000,47417969,48614253,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CCM","WOLF AES CCM",24,1000,48800835,49970120,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CCM","WOLF AES CCM",25,1000,50156659,51368155,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CCM","WOLF AES CCM",19,1000,51554724,52731562,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CCM","WOLF AES CCM",20,1000,52918280,54084127,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CCM","WOLF AES CCM",21,1000,54270652,55464166,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CCM","WOLF AES CCM",23,1000,55650741,56872561,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CCM","WOLF AES CCM",23,1000,57059135,58250648,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_CCM","WOLF AES CCM",24,1000,58437218,59606047,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"DS70005365","WOLF AES ECB 128",16,1000,59792583,59899114,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"DS70005365","WOLF SHA 256",11,1000,60092838,63103810,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_NIST","WOLF SHA 128",3,1000,63293265,64797552,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_NIST","WOLF SHA 128",56,1000,64983779,67796193,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_NIST","WOLF SHA 224",3,1000,67983546,70828358,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_NIST","WOLF SHA 224",56,1000,71014628,76483793,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_NIST","WOLF SHA 256",3,1000,76671299,79677774,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_NIST","WOLF SHA 256",56,1000,79864056,85494151,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_NIST","WOLF SHA 256",112,1000,85681667,91351771,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_NIST","WOLF SHA 384",3,1000,91540245,101408291,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_NIST","WOLF SHA 384",112,1000,101595765,121073200,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_NIST","WOLF SHA 512",3,1000,121263854,131178148,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_NIST","WOLF SHA 512",112,1000,131366636,150886172,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",44,1000,151090218,154115196,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",45,1000,154305881,157331496,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",46,1000,157522028,160548139,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",47,1000,160738649,163765264,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",48,1000,163955810,166982927,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",49,1000,167173587,170201076,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",50,1000,170391637,173419627,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",51,1000,173610232,176638705,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",52,1000,176829445,179858424,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",53,1000,180049172,183078789,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",54,1000,183269367,186299475,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",55,1000,186490223,189520704,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",56,1000,189713880,195342470,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",57,1000,195535791,201165018,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",58,1000,201358193,206987902,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",59,1000,207181074,212811308,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",60,1000,213004476,218635204,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",61,1000,218828476,224459563,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",62,1000,224652916,230284657,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",63,1000,230477848,236109934,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",64,1000,236303270,241932735,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",460,1000,242141650,263562263,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",461,1000,263772570,285193693,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",462,1000,285403758,306825533,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",463,1000,307035738,328457870,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",464,1000,328668080,350090714,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",465,1000,350300877,371723978,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",466,1000,371934318,393357930,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",467,1000,393568011,414992258,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",468,1000,415202453,436627022,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",469,1000,436837248,458262376,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",470,1000,458472491,479898134,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",471,1000,480108538,501534636,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",472,1000,501744870,523171479,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",473,1000,523381604,544808843,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",474,1000,545019067,566446687,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",475,1000,566657078,588085147,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",476,1000,588295247,609723980,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",477,1000,609934079,631363312,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",478,1000,631573546,653003169,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",479,1000,653213563,674643665,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",480,1000,674854074,696284682,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",481,1000,696494822,717926072,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",482,1000,718136210,739567978,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",483,1000,739778268,761210510,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",484,1000,761420791,782853399,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",485,1000,783063838,804496953,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",486,1000,804707385,826140994,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",487,1000,826351398,847785518,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",488,1000,847995957,869430583,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",489,1000,869641011,891076135,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",490,1000,891286419,912722048,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",491,1000,912932326,934368454,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",492,1000,934578748,956015365,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",493,1000,956225636,977662757,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",494,1000,977873048,999310674,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",495,1000,999521116,1020959247,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",496,1000,1021170761,1042609391,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",497,1000,1042822006,1064261259,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",498,1000,1064473714,1085913475,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",499,1000,1086125971,1107566212,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",500,1000,1107778588,1129219337,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",501,1000,1129431847,1150872977,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",502,1000,1151085671,1172527439,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",503,1000,1172739974,1194181721,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",504,1000,1194396718,1218437079,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",505,1000,1218652365,1242693254,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",506,1000,1242908241,1266949640,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",507,1000,1267164906,1291206761,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",508,1000,1291421874,1315464245,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",509,1000,1315679366,1339722239,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",510,1000,1339937517,1363980886,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",511,1000,1364195858,1388239242,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",512,1000,1388454500,1412490617,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",537,1000,1412705613,1436762374,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",562,1000,1436977531,1461046655,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",587,1000,1461264551,1487943599,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",612,1000,1488161527,1514853288,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",637,1000,1515073653,1544375490,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",662,1000,1544595876,1573910151,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",687,1000,1574130543,1603457280,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",712,1000,1603680379,1635617127,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",737,1000,1635840117,1667789392,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",762,1000,1668015001,1702574348,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",787,1000,1702800114,1737371739,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",812,1000,1737597536,1772181969,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",837,1000,1772410253,1809604510,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",862,1000,1809832773,1847039562,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",887,1000,1847267867,1884486801,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",912,1000,1884717703,1924546972,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",937,1000,1924778049,1964619939,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",962,1000,1964853481,2007305394,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",987,1000,2007539048,2050003332,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1012,1000,2050237093,2092713991,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1037,1000,2092951204,2138038117,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1062,1000,2138275465,2183374899,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1087,1000,2183614745,2231323919,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1112,1000,2231563783,2279285699,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1137,1000,2279525874,2327260285,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1162,1000,2327502767,2377847164,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1187,1000,2378089944,2428446887,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1212,1000,2428692127,2481659213,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1237,1000,2481904601,2534884009,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1262,1000,2535129389,2588121289,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1287,1000,2588369323,2643971181,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1312,1000,2644219231,2699833668,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1337,1000,2700084166,2758308847,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1362,1000,2758559461,2816796520,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1387,1000,2817046901,2875296304,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1412,1000,2875549573,2936409189,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1437,1000,2936662194,2997534298,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1462,1000,2997787622,3058672244,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1487,1000,3058928151,3122422727,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1512,1000,3122678496,3186185535,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",1537,1000,3186444061,3252561004,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",2537,1000,3252858773,3358438825,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",3537,1000,3358778933,3506419286,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"SHA_BB","WOLF SHA 256",4537,1000,3506801269,3696502423,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3696695016,3696798059,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3696999941,3697107956,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3697309857,3697416031,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3697617910,3697724937,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3697926853,3698029889,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3698231925,3698335102,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3698537005,3698640043,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3698841903,3698944944,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3699146916,3699250954,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3699453065,3699557100,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3699759043,3699863067,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3700065019,3700169053,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3700371116,3700474154,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3700676087,3700779120,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3700981022,3701084061,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AESAVS_ECB128","WOLF AES ECB 128",16,1000,3701286259,3701389300,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_ECB","WOLF AES ECB 128",1024,1000,3701604738,3704254361,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_ECB","WOLF AES ECB 128",2048,1000,3704454373,3709691086,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"AES_ECB","WOLF AES ECB 128",5120,1000,3709893308,3722890810,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"DES3_THREEDES","WOLF DES3 CBC",48,1000,3723165133,3734293044,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"DES3_THREEDES","WOLF DES3 CBC",48,1000,3734567947,3745696197,,,,,"",""
+>>,"ATSAML21J18B","SAML21 XPlained Ultra","sam_l21_xplained_pro_hw","AES256","yes","$ld:$",48000000,12000000,"DES3_THREEDES","WOLF DES3 CBC",448,1000,3745971904,3849294394,,,,,"",""
+-----END TIMED TESTING-----
+
+Tests attempted :188
+Tests successful:188
