@@ -463,8 +463,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_l11_xplained_pro_hwsw/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">AB34126A148616F33548CE03CFBEB2D8</GeneratedChecksum>
-          <UserChecksum dnOrder="6">AB34126A148616F33548CE03CFBEB2D8</UserChecksum>
+          <GeneratedChecksum dnOrder="5">AC89AA0F2AF07C0733678D30AE1A5E02</GeneratedChecksum>
+          <UserChecksum dnOrder="6">AC89AA0F2AF07C0733678D30AE1A5E02</UserChecksum>
         </File>
         <File dnOrder="51">
           <Type dnOrder="0">SOURCE</Type>
@@ -625,8 +625,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_l11_xplained_pro_hwsw/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">5F6ACFF94B9C2292296B25843B067A4A</GeneratedChecksum>
-          <UserChecksum dnOrder="6">5F6ACFF94B9C2292296B25843B067A4A</UserChecksum>
+          <GeneratedChecksum dnOrder="5">95FB4517DE855D651A24348CC3D86FC9</GeneratedChecksum>
+          <UserChecksum dnOrder="6">95FB4517DE855D651A24348CC3D86FC9</UserChecksum>
         </File>
         <File dnOrder="69">
           <Type dnOrder="0">SOURCE</Type>
@@ -976,8 +976,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_l11_xplained_pro_hwsw/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">98DC89F587F87F1B6BE3BBDE2FD28530</GeneratedChecksum>
-          <UserChecksum dnOrder="6">98DC89F587F87F1B6BE3BBDE2FD28530</UserChecksum>
+          <GeneratedChecksum dnOrder="5">7831CFB6172E0A462E6D1858094639E0</GeneratedChecksum>
+          <UserChecksum dnOrder="6">7831CFB6172E0A462E6D1858094639E0</UserChecksum>
         </File>
         <File dnOrder="108">
           <Type dnOrder="0">SOURCE</Type>
@@ -1543,8 +1543,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_l11_xplained_pro_hwsw/bsp/</LogicalPath>
           <PhysicalPath dnOrder="4">/bsp/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">37AB3222D7EC502CEB657BC5341D0CEA</GeneratedChecksum>
-          <UserChecksum dnOrder="6">37AB3222D7EC502CEB657BC5341D0CEA</UserChecksum>
+          <GeneratedChecksum dnOrder="5">7CAFC86B3940956A8AFFAC5A3A388B3E</GeneratedChecksum>
+          <UserChecksum dnOrder="6">7CAFC86B3940956A8AFFAC5A3A388B3E</UserChecksum>
         </File>
         <File dnOrder="171">
           <Type dnOrder="0">HEADER</Type>
@@ -2551,8 +2551,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/sam_l11_xplained_pro_hwsw/peripheral/sercom/usart/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/sercom/usart/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">F26B38FA1088FD5D602A6772C48878C7</GeneratedChecksum>
-          <UserChecksum dnOrder="6">F26B38FA1088FD5D602A6772C48878C7</UserChecksum>
+          <GeneratedChecksum dnOrder="5">9B409E836AF212CD11C4BB20B1B7C26E</GeneratedChecksum>
+          <UserChecksum dnOrder="6">9B409E836AF212CD11C4BB20B1B7C26E</UserChecksum>
         </File>
         <File dnOrder="283">
           <Type dnOrder="0">HEADER</Type>
@@ -3068,7 +3068,7 @@
       <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
       <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
       <Setting dnOrder="4" key="MERGE_STRATEGY" value="USER_ALL"/>
-      <Setting dnOrder="5" key="PackageFilter" value="bsp;core;core;crypto;crypto;csp;csp;csp;quick_docs;"/>
+      <Setting dnOrder="5" key="PackageFilter" value="aerospace;audio;aws_cloud;bootloader;bootloader_apps_ethernet;bootloader_apps_i2c;bootloader_apps_sdcard;bootloader_apps_uart;bootloader_apps_usb;bsp;bt;classb_sam_e5x_d5x;core;crypto;cryptoauthlib;cryptoauthlib_apps;crypto_apps_encrypt_decrypt;crypto_apps_large_hash;crypto_apps_speed_test;csp;expresslogic_threadx;gfx;gfx_apps;micrium_ucos3;motor_control;net;quick_docs;reference_apps;touch;usb;wireless;x2c;"/>
     </Settings>
   </Configurator>
 </Configuration>
