@@ -55,7 +55,6 @@
 
 /* Brief default interrupt handlers for core IRQs.*/
 
-__attribute__((noreturn))
 void NonMaskableInt_Handler(void)
 {
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
@@ -66,7 +65,6 @@ void NonMaskableInt_Handler(void)
     }
 }
 
-__attribute__((noreturn))
 void HardFault_Handler(void)
 {
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
