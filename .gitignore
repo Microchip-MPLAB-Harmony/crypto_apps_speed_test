@@ -13,3 +13,5 @@
 **/*.IAR/settings
 **/*.IAR/*.dep
 **/*.IAR/*.custom_argvars
+**/.history
+**/pic32mz_efm_starterKit*
