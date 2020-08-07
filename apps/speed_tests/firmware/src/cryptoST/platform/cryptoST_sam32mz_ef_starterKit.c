@@ -65,7 +65,7 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 #include "cryptoST/cryptoSTE_buildInfo.h"
 
 #define PLATFORM "PIC32MZ_EF Starter Kit"
-#if defined(WOLFSSL_HAVE_MCHP_HW_CRYPTO)
+#if defined(WOLFSSL_MICROCHIP_PIC32MZ) // unique to PIC32M
 #define ENCRYPTION_ENGINE "ICM"
 #else
 #define ENCRYPTION_ENGINE "Software" /* no acceleration */

@@ -61,6 +61,10 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 #include "cryptoSTE_rsa.h"
 #include "../test_data/cryptoSpeedTestData.h"
 
+#if !defined(NO_SHA224)
+#define WOLFSSL_SHA224
+#endif
+
 #include <wolfssl/wolfcrypt/settings.h>
 #include <wolfssl/wolfcrypt/rsa.h>
 #include <wolfssl/wolfcrypt/sha.h>
@@ -742,9 +746,11 @@ const char * cryptoSTE_rsa_timed(const cryptoST_testDetail_t * td,
     case ET_PK_RSA_SIGN:
         switch(td->io.rsas.in.hashmode)
         {
+#if !defined(NO_SHA224)
         case ET_SHA_224:
             test = &test_sign_sha224;
             break;
+#endif
         case ET_SHA_256:
             test = &test_sign_sha256;
             break;
@@ -757,9 +763,11 @@ const char * cryptoSTE_rsa_timed(const cryptoST_testDetail_t * td,
     case ET_PK_RSA_VERIFY:
         switch(td->io.rsav.in.hashmode)
         {
+#if !defined(NO_SHA224)
         case ET_SHA_224:
             test = &test_verify_sha224;
             break;
+#endif
         case ET_SHA_256:
             test = &test_verify_sha256;
             break;
@@ -775,9 +783,11 @@ const char * cryptoSTE_rsa_timed(const cryptoST_testDetail_t * td,
         case ET_NONE:
             test = &test_exptmod_none;
             break;
+#if !defined(NO_SHA224)
         case ET_SHA_224:
             test = &test_exptmod_sha224;
             break;
+#endif
         case ET_SHA_256:
             test = &test_exptmod_sha256;
             break;
