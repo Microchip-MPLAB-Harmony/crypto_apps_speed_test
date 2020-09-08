@@ -120,7 +120,7 @@ static int Pic32Crypto(const byte* pIn, int inLen, word32* pOut, int outLen,
         XMEMCPY(in, pIn, inLen);
     }
 
-    /* get uncached address */
+    /* get uncached address */ // klk v4.5.0-stable
     sa_p = KVA0_TO_KVA1(&sa);
     bd_p = KVA0_TO_KVA1(&bd);
     out_p= KVA0_TO_KVA1(out);

@@ -60,8 +60,10 @@
 
 extern uint32_t _stack;
 
+void Dummy_Handler(void);
+
 /* Brief default interrupt handler for unused IRQs.*/
-void __attribute__((optimize("-O1"),section(".text.Dummy_Handler"),long_call))Dummy_Handler(void)
+void __attribute__((optimize("-O1"),section(".text.Dummy_Handler"),long_call, noreturn))Dummy_Handler(void)
 {
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
     __builtin_software_breakpoint();
@@ -94,7 +96,7 @@ void PIOA_Handler               ( void ) __attribute__((weak, alias("Dummy_Handl
 void PIOB_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
 void PIOC_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
 void USART0_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
-void USART1_InterruptHandler    ( void ) __attribute__((weak, alias("Dummy_Handler")));
+void USART1_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
 void USART2_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
 void PIOD_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
 void PIOE_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -187,7 +189,7 @@ const DeviceVectors exception_table=
     .pfnPIOB_Handler               = ( void * ) PIOB_Handler,
     .pfnPIOC_Handler               = ( void * ) PIOC_Handler,
     .pfnUSART0_Handler             = ( void * ) USART0_Handler,
-    .pfnUSART1_Handler             = ( void * ) USART1_InterruptHandler,
+    .pfnUSART1_Handler             = ( void * ) USART1_Handler,
     .pfnUSART2_Handler             = ( void * ) USART2_Handler,
     .pfnPIOD_Handler               = ( void * ) PIOD_Handler,
     .pfnPIOE_Handler               = ( void * ) PIOE_Handler,

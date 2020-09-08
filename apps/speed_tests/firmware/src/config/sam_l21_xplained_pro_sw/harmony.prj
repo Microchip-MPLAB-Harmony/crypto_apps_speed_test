@@ -616,8 +616,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">wolfcrypt/port</LogicalPath>
           <PhysicalPath dnOrder="4">/../../third_party/wolfssl/wolfssl/wolfcrypt/src/port/pic32/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">257FD8DA385CB8BD2ECBD68395BB7D76</GeneratedChecksum>
-          <UserChecksum dnOrder="6">257FD8DA385CB8BD2ECBD68395BB7D76</UserChecksum>
+          <GeneratedChecksum dnOrder="5">DA7D910C7C981439590EE35FE17BC0D5</GeneratedChecksum>
+          <UserChecksum dnOrder="6">DA7D910C7C981439590EE35FE17BC0D5</UserChecksum>
         </File>
         <File dnOrder="68">
           <Type dnOrder="0">SOURCE</Type>
@@ -2897,7 +2897,7 @@
       <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
       <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
       <Setting dnOrder="4" key="MERGE_STRATEGY" value="USER_ALL"/>
-      <Setting dnOrder="5" key="PackageFilter" value="aerospace;audio;bootloader;bootloader_apps_ethernet;bootloader_apps_i2c;bootloader_apps_sdcard;bootloader_apps_uart;bootloader_apps_usb;bsp;bt;classb_sam_e5x_d5x;core;crypto;cryptoauthlib;cryptoauthlib_apps;csp;ethercat;expresslogic_threadx;gfx;gfx_apps;micrium_ucos3;motor_control;net;quick_docs;reference_apps;touch;usb;wireless;x2c;"/>
+      <Setting dnOrder="5" key="PackageFilter" value="bsp;core;crypto;cryptoauthlib;crypto_apps_encrypt_decrypt;crypto_apps_large_hash;crypto_apps_speed_test;csp;quick_docs;touch;usb;"/>
       <Setting dnOrder="6" key="TRUSTZONE" value="false"/>
     </Settings>
   </Configurator>

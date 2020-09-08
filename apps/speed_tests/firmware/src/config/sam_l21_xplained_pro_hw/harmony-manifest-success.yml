@@ -4,7 +4,7 @@
 
 
 project: speed_tests
-creation_date: 2020-09-08T18:50:09.257-07:00[America/Phoenix]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2020-09-08T16:34:55.544-07:00[America/Phoenix]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mhc_mode: IDE            # [IDE|Standalone|Headless]
 mplabx_version: v5.40        # if MPLAB X plugin only
@@ -15,7 +15,7 @@ modules:
     - {name: "csp", version: "v3.8.0"}
     - {name: "core", version: "v3.8.0"}
     - {name: "dev_packs", version: "v3.8.0"}
-    - {name: "mhc", version: "v3.5.1"}
+    - {name: "mhc", version: "unknown"}
     - {name: "wolfssl", version: "v4.5.0-stable"}
     - {name: "bsp", version: "v3.8.0"}
     - {name: "crypto", version: "v3.6.0-rc.2"}
