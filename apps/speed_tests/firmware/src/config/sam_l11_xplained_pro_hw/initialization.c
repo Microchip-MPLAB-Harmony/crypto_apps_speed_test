@@ -54,7 +54,7 @@
 // Section: Configuration Bits
 // ****************************************************************************
 // ****************************************************************************
-// #pragma config NVMCTRL_SULCK = 0x7
+#pragma config NVMCTRL_SULCK = 0x7
 #pragma config NVMCTRL_NSULCK = 0x7
 #pragma config BOD33_LEVEL = 0x6
 #pragma config BOD33_DIS = CLEAR
@@ -107,7 +107,7 @@
 #pragma config BOOTROM_USERCRC = 0x8433651e
 
 /* Do not remove the following line when performing Harmony3 code build. 
- * Refer to the crypt library release notes for V3.5. 
+ * Refer to the crypto library release notes for V3.5. 
  */
 void TC0_TimerCallbackRegister
     (SYS_TIME_PLIB_CALLBACK callback, uintptr_t context){}
@@ -169,6 +169,26 @@ const SYS_TIME_INIT sysTimeInitData =
 // *****************************************************************************
 // *****************************************************************************
 
+/*******************************************************************************
+  Function:
+    void STDIO_BufferModeSet ( void )
+
+  Summary:
+    Sets the buffering mode for stdin and stdout
+
+  Remarks:
+ ********************************************************************************/
+static void STDIO_BufferModeSet(void)
+{
+
+    /* Make stdin unbuffered */
+    setbuf(stdin, NULL);
+
+    /* Make stdout unbuffered */
+    setbuf(stdout, NULL);
+}
+
+
 
 
 /*******************************************************************************
@@ -187,6 +207,9 @@ void SYS_Initialize ( void* data )
 
     PM_Initialize();
 
+    STDIO_BufferModeSet();
+  
+
   
     PORT_Initialize();
 
@@ -196,7 +219,6 @@ void SYS_Initialize ( void* data )
 
     NVMCTRL_Initialize();
 
-	BSP_Initialize();
     EVSYS_Initialize();
 
     SERCOM0_USART_Initialize();

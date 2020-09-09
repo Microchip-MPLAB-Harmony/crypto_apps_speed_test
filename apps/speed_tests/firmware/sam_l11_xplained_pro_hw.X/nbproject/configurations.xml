@@ -14,6 +14,11 @@
           <logicalFolder name="f3" displayName="crypto" projectFiles="true">
             <itemPath>../src/config/sam_l11_xplained_pro_hw/crypto/crypto.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f5" displayName="osal" projectFiles="true">
+            <itemPath>../src/config/sam_l11_xplained_pro_hw/osal/osal.h</itemPath>
+            <itemPath>../src/config/sam_l11_xplained_pro_hw/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/sam_l11_xplained_pro_hw/osal/osal_impl_basic.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f5" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_l11_xplained_pro_hw/peripheral/clock/plib_clock.h</itemPath>
@@ -65,14 +70,10 @@
           <itemPath>../src/config/sam_l11_xplained_pro_hw/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/sam_l11_xplained_pro_hw/definitions.h</itemPath>
           <itemPath>../src/config/sam_l11_xplained_pro_hw/config.h</itemPath>
+          <itemPath>../src/config/sam_l11_xplained_pro_hw/device.h</itemPath>
           <itemPath>../src/config/sam_l11_xplained_pro_hw/user.h</itemPath>
           <itemPath>../src/config/sam_l11_xplained_pro_hw/configuration.h</itemPath>
         </logicalFolder>
-      </logicalFolder>
-      <logicalFolder name="f5" displayName="osal" projectFiles="true">
-        <itemPath>../src/config/sam_l11_xplained_pro_hw/osal/osal.h</itemPath>
-        <itemPath>../src/config/sam_l11_xplained_pro_hw/osal/osal_definitions.h</itemPath>
-        <itemPath>../src/config/sam_l11_xplained_pro_hw/osal/osal_impl_basic.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="packs" projectFiles="true">
         <logicalFolder name="f1" displayName="ATSAML11E16A_DFP" projectFiles="true">
@@ -109,7 +110,6 @@
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAML11E16A_DFP/pio/saml11e16a.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/packs/ATSAML11E16A_DFP/device.h</itemPath>
           <itemPath>../src/packs/ATSAML11E16A_DFP/atsaml11e16a.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
@@ -125,6 +125,7 @@
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm23.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv8.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/tz_context.h</itemPath>
               </logicalFolder>
             </logicalFolder>
@@ -285,6 +286,13 @@
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1"
+                       displayName="sam_l11_xplained_pro_hw"
+                       projectFiles="true">
+          <itemPath>../src/config/sam_l11_xplained_pro_hw/ATSAML11E16A.ld</itemPath>
+        </logicalFolder>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -510,10 +518,12 @@
                    projectFiles="false">
       <logicalFolder name="f1" displayName="wolfcrypt" projectFiles="true">
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/misc.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/evp.c</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_l11_xplained_pro_hw/harmony.prj</itemPath>
       <itemPath>../src/config/sam_l11_xplained_pro_hw/sam_l11_xplained_pro_hw.xml</itemPath>
+      <itemPath>../src/config/sam_l11_xplained_pro_hw/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -536,7 +546,7 @@
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAML11_DFP" vendor="Microchip" version="3.2.86"/>
+        <pack name="SAML11_DFP" vendor="Microchip" version="4.0.114"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -597,7 +607,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_l11_xplained_pro_hw;../src/packs/ATSAML11E16A_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl;../src/third_party/zlib"/>
+                  value="../src/third_party/zlib;../src/third_party/wolfssl/wolfssl;../src/third_party/wolfssl;../src;../src/config/sam_l11_xplained_pro_hw;../src/packs/ATSAML11E16A_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -607,7 +617,7 @@
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
-                  value="HAVE_CONFIG_H;WOLFSSL_IGNORE_FILE_WARN"/>
+                  value="WOLFSSL_IGNORE_FILE_WARN;HAVE_CONFIG_H"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="toplevel-reordering" value=""/>
@@ -672,7 +682,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value="SECURE;AS=65500;RS=16000;ANSC=1024;"/>
+        <property key="preprocessor-macros" value=";RS=16000;AS=65500;ANSC=1024;SECURE"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -681,6 +691,7 @@
         <property key="symbol-stripping" value=""/>
         <property key="trace-symbols" value=""/>
         <property key="warn-section-align" value="false"/>
+        <appendMe value="-DSECURE -DAS_SIZE=63000 -DRS_SIZE=16000 -DANSC_SIZE=1024 -DBOOTPROT_SIZE=0"/>
       </C32-LD>
       <C32CPP>
         <property key="additional-warnings" value="false"/>
@@ -693,7 +704,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_l11_xplained_pro_hw;../src/packs/ATSAML11E16A_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -752,6 +764,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/c14102/Git/H3_development/crypto_apps_speed_test/apps/speed_tests/firmware/sam_l11_xplained_pro_hw.X/debug/sam_l11_xplained_pro_hw/sam_l11_xplained_pro_hw_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

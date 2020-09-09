@@ -86,8 +86,6 @@ void TC0_TimerInitialize( void )
     /* Configure in Match Frequency Mode */
     TC0_REGS->COUNT32.TC_WAVE = TC_WAVE_WAVEGEN_MPWM;
 
-    /* Configure timer one shot mode */
-    TC0_REGS->COUNT32.TC_CTRLBSET = TC_CTRLBSET_ONESHOT_Msk;
     /* Configure timer period */
     TC0_REGS->COUNT32.TC_CC[0U] = 8000U;
 
@@ -105,12 +103,6 @@ void TC0_TimerInitialize( void )
 /* Enable the TC counter */
 void TC0_TimerStart( void )
 {
-    /* In one-shot timer mode, first disable the timer */
-    TC0_REGS->COUNT32.TC_CTRLA &= ~TC_CTRLA_ENABLE_Msk;
-    while((TC0_REGS->COUNT32.TC_SYNCBUSY & TC_SYNCBUSY_ENABLE_Msk) == TC_SYNCBUSY_ENABLE_Msk)
-    {
-        /* Wait for Write Synchronization */
-    }
     TC0_REGS->COUNT32.TC_CTRLA |= TC_CTRLA_ENABLE_Msk;
     while((TC0_REGS->COUNT32.TC_SYNCBUSY & TC_SYNCBUSY_ENABLE_Msk) == TC_SYNCBUSY_ENABLE_Msk)
     {
@@ -131,6 +123,15 @@ void TC0_TimerStop( void )
 uint32_t TC0_TimerFrequencyGet( void )
 {
     return (uint32_t)(8000000UL);
+}
+
+void TC0_TimerCommandSet(TC_COMMAND command)
+{
+    TC0_REGS->COUNT32.TC_CTRLBSET = command << TC_CTRLBSET_CMD_Pos;
+    while((TC0_REGS->COUNT32.TC_SYNCBUSY))
+    {
+        /* Wait for Write Synchronization */
+    }    
 }
 
 /* Get the current timer counter value */
