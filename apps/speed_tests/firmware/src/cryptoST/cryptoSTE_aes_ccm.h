@@ -51,11 +51,11 @@ extern "C" {
 
 #include "../test_data/cryptoSpeedTestData.h"
 
-#if defined(HAVE_AESGCM)
+#if defined(HAVE_AESCCM)
 const char * cryptoSTE_aes_ccm_timed(const cryptoST_testDetail_t * result,
                                    cryptoSTE_testExecution_t * param);
 #else
-#define cryptoSTE_aes_ccm_timed(t_,r_,i_) \
+#define cryptoSTE_aes_ccm_timed(t_,r_) \
     PRINT("**** AES_CCM(128) is not available!" CRLF);
 #endif // def WOLFSSL_AES_128
 

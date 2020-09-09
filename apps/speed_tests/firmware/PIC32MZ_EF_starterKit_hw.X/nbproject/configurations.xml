@@ -14,6 +14,11 @@
           <logicalFolder name="f3" displayName="crypto" projectFiles="true">
             <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/crypto/crypto.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f5" displayName="osal" projectFiles="true">
+            <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/osal/osal.h</itemPath>
+            <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/osal/osal_impl_basic.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f5" displayName="cache" projectFiles="true">
               <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/peripheral/cache/plib_cache.h</itemPath>
@@ -60,20 +65,9 @@
           <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/device_cache.h</itemPath>
           <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/definitions.h</itemPath>
+          <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/device.h</itemPath>
           <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/user.h</itemPath>
           <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/configuration.h</itemPath>
-        </logicalFolder>
-      </logicalFolder>
-      <logicalFolder name="f4" displayName="osal" projectFiles="true">
-        <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/osal/osal.h</itemPath>
-        <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/osal/osal_definitions.h</itemPath>
-        <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/osal/osal_impl_basic.h</itemPath>
-      </logicalFolder>
-      <logicalFolder name="f3" displayName="packs" projectFiles="true">
-        <logicalFolder name="f1"
-                       displayName="PIC32MZ2048EFM144_DFP"
-                       projectFiles="true">
-          <itemPath>../src/packs/PIC32MZ2048EFM144_DFP/device.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="wolfcrypt" projectFiles="true">
@@ -217,6 +211,13 @@
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1"
+                       displayName="PIC32MZ_EF_starterKit_hw"
+                       projectFiles="true">
+          <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/p32MZ2048EFM144.ld</itemPath>
+        </logicalFolder>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -462,6 +463,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/harmony.prj</itemPath>
       <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/PIC32MZ_EF_starterKit_hw.xml</itemPath>
+      <itemPath>../src/config/PIC32MZ_EF_starterKit_hw/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -519,7 +521,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl;../src;../src/config/PIC32MZ_EF_starterKit_hw;../src/packs/PIC32MZ2048EFM144_DFP"/>
+                  value="../src;../src/config/PIC32MZ_EF_starterKit_hw;../src/packs/PIC32MZ2048EFM144_DFP;../src/third_party/wolfssl/wolfssl;../src/third_party/wolfssl"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -529,7 +531,7 @@
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
-                  value="HAVE_CONFIG_H;WOLFSSL_IGNORE_FILE_WARN"/>
+                  value="WOLFSSL_IGNORE_FILE_WARN;HAVE_CONFIG_H"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="toplevel-reordering" value=""/>
@@ -616,7 +618,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/PIC32MZ_EF_starterKit_hw;../src/packs/PIC32MZ2048EFM144_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -740,8 +743,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d1fffff"/>
         <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/c14102/Git/H3_development/crypto_apps_speed_test/apps/speed_tests/firmware/PIC32MZ_EF_starterKit_hw.X/debug/PIC32MZ_EF_starterKit_hw/PIC32MZ_EF_starterKit_hw_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.ledbrightness" value="5"/>

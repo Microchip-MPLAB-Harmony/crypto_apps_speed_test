@@ -133,7 +133,6 @@ extern "C" {
 #define HAVE_AES_ECB
 #define HAVE_AES_CBC
 #define WOLFSSL_AES_COUNTER
-#define HAVE_AESGCM
 #define HAVE_AESCCM
 #define NO_RC4
 #define NO_HC128
@@ -149,7 +148,6 @@ extern "C" {
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
 
-#define WOLFSSL_DES_ECB // klk
 
 
 // *****************************************************************************
