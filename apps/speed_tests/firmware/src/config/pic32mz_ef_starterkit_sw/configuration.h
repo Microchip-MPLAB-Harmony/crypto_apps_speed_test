@@ -85,7 +85,7 @@ extern "C" {
 #define SYS_TIME_HW_COUNTER_WIDTH                   (32)
 #define SYS_TIME_HW_COUNTER_PERIOD                  (4294967295U)
 #define SYS_TIME_HW_COUNTER_HALF_PERIOD             (SYS_TIME_HW_COUNTER_PERIOD>>1)
-#define SYS_TIME_CPU_CLOCK_FREQUENCY                (50000000)
+#define SYS_TIME_CPU_CLOCK_FREQUENCY                (200000000)
 #define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (620)
 
 
@@ -119,6 +119,7 @@ extern "C" {
 #define WOLFCRYPT_ONLY
 #define WOLFSSL_HAVE_MIN
 #define WOLFSSL_HAVE_MAX
+// ---------- FUNCTIONAL CONFIGURATION START ----------
 #define NO_MD4
 #define WOLFSSL_SHA224
 #define WOLFSSL_SHA384
@@ -146,6 +147,7 @@ extern "C" {
 #define SINGLE_THREADED
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
+// ---------- FUNCTIONAL CONFIGURATION END ----------
 
 
 

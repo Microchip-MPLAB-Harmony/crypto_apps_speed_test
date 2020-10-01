@@ -526,8 +526,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/pic32mz_ef_starterkit_sw/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">FE21C99F99DD94E97B547C46A7A449D3</GeneratedChecksum>
-          <UserChecksum dnOrder="6">FE21C99F99DD94E97B547C46A7A449D3</UserChecksum>
+          <GeneratedChecksum dnOrder="5">575110E656E1FF724A4F53370F7FF5BD</GeneratedChecksum>
+          <UserChecksum dnOrder="6">575110E656E1FF724A4F53370F7FF5BD</UserChecksum>
         </File>
         <File dnOrder="58">
           <Type dnOrder="0">SOURCE</Type>
@@ -607,8 +607,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">wolfcrypt/port</LogicalPath>
           <PhysicalPath dnOrder="4">/../../third_party/wolfssl/wolfssl/wolfcrypt/src/port/pic32/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">DA7D910C7C981439590EE35FE17BC0D5</GeneratedChecksum>
-          <UserChecksum dnOrder="6">DA7D910C7C981439590EE35FE17BC0D5</UserChecksum>
+          <GeneratedChecksum dnOrder="5">257FD8DA385CB8BD2ECBD68395BB7D76</GeneratedChecksum>
+          <UserChecksum dnOrder="6">257FD8DA385CB8BD2ECBD68395BB7D76</UserChecksum>
         </File>
         <File dnOrder="67">
           <Type dnOrder="0">SOURCE</Type>
@@ -697,8 +697,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/pic32mz_ef_starterkit_sw/peripheral/uart/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/uart/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">844AE927BD8CF5D3F95A410E050EB8F0</GeneratedChecksum>
-          <UserChecksum dnOrder="6">844AE927BD8CF5D3F95A410E050EB8F0</UserChecksum>
+          <GeneratedChecksum dnOrder="5">076FF7ED3F385B8B4066814C38EDF59B</GeneratedChecksum>
+          <UserChecksum dnOrder="6">076FF7ED3F385B8B4066814C38EDF59B</UserChecksum>
         </File>
         <File dnOrder="77">
           <Type dnOrder="0">SOURCE</Type>
@@ -1489,8 +1489,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/pic32mz_ef_starterkit_sw/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">9306B5C0F1A613C04FFF12941CE20BAB</GeneratedChecksum>
-          <UserChecksum dnOrder="6">9306B5C0F1A613C04FFF12941CE20BAB</UserChecksum>
+          <GeneratedChecksum dnOrder="5">51FCE9B54328CE85535C74F1FC18AFEE</GeneratedChecksum>
+          <UserChecksum dnOrder="6">51FCE9B54328CE85535C74F1FC18AFEE</UserChecksum>
         </File>
         <File dnOrder="165">
           <Type dnOrder="0">HEADER</Type>
@@ -2101,8 +2101,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/pic32mz_ef_starterkit_sw/peripheral/coretimer/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/coretimer/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">774D25E20E3B7739CC07FE485BA8EA68</GeneratedChecksum>
-          <UserChecksum dnOrder="6">774D25E20E3B7739CC07FE485BA8EA68</UserChecksum>
+          <GeneratedChecksum dnOrder="5">49EF1C56EBDEE25C8E46F029F020AB21</GeneratedChecksum>
+          <UserChecksum dnOrder="6">49EF1C56EBDEE25C8E46F029F020AB21</UserChecksum>
         </File>
         <File dnOrder="233">
           <Type dnOrder="0">HEADER</Type>
@@ -2128,8 +2128,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/pic32mz_ef_starterkit_sw/peripheral/uart/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/uart/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">3F098BCA42A4AD1D9D792DF17FD85A04</GeneratedChecksum>
-          <UserChecksum dnOrder="6">3F098BCA42A4AD1D9D792DF17FD85A04</UserChecksum>
+          <GeneratedChecksum dnOrder="5">2D9C4D63BA71C4F7D312593DD4D8AEE1</GeneratedChecksum>
+          <UserChecksum dnOrder="6">2D9C4D63BA71C4F7D312593DD4D8AEE1</UserChecksum>
         </File>
         <File dnOrder="236">
           <Type dnOrder="0">HEADER</Type>
@@ -2407,8 +2407,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/pic32mz_ef_starterkit_sw/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">4B3C3EF8A318908A22B78500515C3288</GeneratedChecksum>
-          <UserChecksum dnOrder="6">4B3C3EF8A318908A22B78500515C3288</UserChecksum>
+          <GeneratedChecksum dnOrder="5"/>
+          <UserChecksum dnOrder="6"/>
         </File>
         <File dnOrder="267">
           <Type dnOrder="0">HEADER</Type>
@@ -2512,7 +2512,7 @@
       <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
       <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
       <Setting dnOrder="4" key="MERGE_STRATEGY" value="USER_ALL"/>
-      <Setting dnOrder="5" key="PackageFilter" value="bsp;core;crypto;cryptoauthlib;crypto_apps_encrypt_decrypt;crypto_apps_large_hash;crypto_apps_speed_test;csp;quick_docs;touch;usb;"/>
+      <Setting dnOrder="5" key="PackageFilter" value="bsp;core;crypto;cryptoauthlib;crypto_apps_encrypt_decrypt;crypto_apps_large_hash;crypto_apps_speed_test;csp;gfx;gfx_apps;quick_docs;touch;usb;"/>
       <Setting dnOrder="6" key="TRUSTZONE" value="false"/>
     </Settings>
   </Configurator>
