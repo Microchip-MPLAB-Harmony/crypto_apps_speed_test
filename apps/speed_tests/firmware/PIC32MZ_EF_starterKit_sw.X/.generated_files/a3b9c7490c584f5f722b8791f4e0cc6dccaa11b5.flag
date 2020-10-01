@@ -1,1 +1,0 @@
-$(MP_EXTRA_AS_PRE)  -c -mprocessor=$(MP_PROCESSOR_OPTION) -DXPRJ_pic32mz_ef_starterkit_sw=$(CND_CONF)  -no-legacy-libc  -Wa,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_AS_POST) -mdfp="${DFP_DIR}"C:\Users\c14102\Git\H3_development\crypto_apps_speed_test\apps\speed_tests\firmware\src\config\pic32mz_ef_starterkit_sw\peripheral\cache\plib_cache_pic32mz.S
