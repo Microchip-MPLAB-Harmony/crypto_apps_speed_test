@@ -93,7 +93,7 @@ void UART2_Initialize( void )
     U2STASET = (_U2STA_UTXEN_MASK | _U2STA_URXEN_MASK | _U2STA_UTXISEL1_MASK);
 
     /* BAUD Rate register Setup */
-    U2BRG = 53;
+    U2BRG = 216;
 
     /* Turn ON UART2 */
     U2MODESET = _U2MODE_ON_MASK;

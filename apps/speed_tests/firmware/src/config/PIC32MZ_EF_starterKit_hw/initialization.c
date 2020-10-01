@@ -93,7 +93,7 @@
 #pragma config FPLLRNG =    RANGE_5_10_MHZ
 #pragma config FPLLICLK =   PLL_FRC
 #pragma config FPLLMULT =   MUL_50
-#pragma config FPLLODIV =   DIV_8
+#pragma config FPLLODIV =   DIV_2
 #pragma config UPLLFSEL =   FREQ_24MHZ
 
 /*** DEVCFG3 ***/
@@ -214,7 +214,7 @@ void SYS_Initialize ( void* data )
     
     /* Configure Prefetch, Wait States and ECC */
     PRECONbits.PREFEN = 3;
-    PRECONbits.PFMWS = 0;
+    PRECONbits.PFMWS = 3;
     CFGCONbits.ECCCON = 3;
 
 
