@@ -8,12 +8,26 @@ nav_order: 99
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
-## Large Hash Crypto Application Release v3.6.0
+## Speed Test Application Release v3.6.1
+
+### New Features
+- Added discover.microchip.com metadata
+
+### Bug fixes
+- Same as v3.6.0
+
+### Known Issues
+- Same as v3.6.0
+
+### Development Tools
+- Same as v3.6.0
+
+## Speed Test Application Release v3.6.0
 
 - The release of the Large Hash Crypto Application corrisponds to the MPLAB Harmony 3 Crypto Library version v3.6.0
 
 ### Development kit and demo application support
-- The following table provides bootloader demo applications available for different development kits.
+- The following table provides demo applications available for different development kits.
 
     | Product Family                    | Development Kits                                                                                                                                  | Encrypt/Decrypt                    |
     | ------------------------------    | ---------------------------------------------------                                                                                               | ---------------- | 
