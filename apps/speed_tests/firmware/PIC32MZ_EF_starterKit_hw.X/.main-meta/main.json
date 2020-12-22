@@ -1,0 +1,79 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.crypto_apps_speed_test_speed_tests_PIC32MZ_EF_starterKit_hw",
+		"version": "3.6.1",
+		"displayName": "Speed Test Framework Example for PIC32MZ EF Family",
+		"projectName": "PIC32MZ_EF_starterKit_hw",
+		"shortDescription": "This demonstration exercises several cryptographic functions, including TDES, DES, SHA 128-512, AES, and RSA, to verify that the software or hardware is performing correctly and to determine the speed of each function for various data sizes. Data is taken from Microchip example code, NSA test vectors, and other sources.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.45.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.50.0"
+			}
+		],
+		"dfp": {
+			"name": "PIC32MZ-EF_DFP",
+			"semverRange": "^1.2.51"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "PIC32MZ2048EFM144",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit"
+			],
+			[
+				"Harmony", "Middleware", "Crypto", "SPEED_TESTS"
+			],
+			[
+				"Middleware", "Crypto", "SPEED_TESTS"
+			]
+		],
+		"peripherals": [
+			"Crypto"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Middleware",
+			"Crypto",
+			"PIC32MZ2048EFM144",
+			"PIC32MZ EF Family",
+			"Crypto",
+			"AES",
+			"DES",
+			"SHA",
+			"HMAC"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
