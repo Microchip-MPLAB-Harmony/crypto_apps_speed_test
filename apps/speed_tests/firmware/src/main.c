@@ -73,7 +73,7 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "definitions.h"                // SYS function prototypes
-
+#include "wolfcrypt/ecc.h"                // SYS function prototypes
 
 // *****************************************************************************
 // *****************************************************************************
@@ -83,7 +83,7 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 #if defined(__SAML11E16A__) // compiler pre-defined
     extern void sam_l11_secure_init(void);
 #endif
-    
+
 int main ( void )
 {
     /* Initialize all modules */

@@ -65,12 +65,15 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 #include "cryptoSTE_aes_cbc.h"
 #include "cryptoSTE_aes_cfb.h"
 #include "cryptoSTE_aes_ctr.h"
+#include "cryptoSTE_aes_ofb.h"
+#include "cryptoSTE_aes_xts.h"
 #if defined(HAVE_AESGCM)
 #include "cryptoSTE_aes_gcm.h"
 #endif
 #if defined(HAVE_AESCCM)
 #include "cryptoSTE_aes_ccm.h"
 #endif
+#include "cryptoSTE_md5.h"
 #include "cryptoSTE_sha.h"
 #include "cryptoSTE_des3.h"
 #include "cryptoSTE_rsa.h"
@@ -121,9 +124,16 @@ cryptoSTE_exec_t sortOutAES128(const cryptoST_testDetail_t * rv)
             exec = cryptoSTE_aes_ecb_timed;
             break;
 #endif
+#if defined(WOLFSSL_AES_OFB)
         case EM_OFB: // for AES, DES
-            // assert_dbug(0);
+            exec = cryptoSTE_aes_ofb_128_timed;
             break;
+#endif
+#if defined(WOLFSSL_AES_XTS)
+        case EM_XTS: // for AES
+            exec = cryptoSTE_aes_xts_128_timed;
+            break;
+#endif
         default:
             break;
     }
@@ -160,8 +170,17 @@ cryptoSTE_exec_t sortOutAES192(const cryptoST_testDetail_t * rv)
             exec = cryptoSTE_aes_ecb_timed;
             break;
 #endif
+#if defined(WOLFSSL_AES_OFB)
         case EM_OFB: // for AES, DES
+            exec = cryptoSTE_aes_ofb_192_timed;
+            // assert_dbug(0);
             break;
+#endif
+//#if defined(WOLFSSL_AES_XTS) //There is no 192 bit XTS 
+//        case EM_XTS: // for AES
+//            exec = cryptoSTE_aes_xts_192_timed;
+//            break;
+//#endif            
         default:
             break;
     }
@@ -197,8 +216,17 @@ cryptoSTE_exec_t sortOutAES256(const cryptoST_testDetail_t * rv)
             exec = cryptoSTE_aes_ecb_timed;
             break;
 #endif
+#if defined(WOLFSSL_AES_OFB)
         case EM_OFB: // for AES, DES
+            exec = cryptoSTE_aes_ofb_256_timed;
+            // assert_dbug(0);
             break;
+#endif
+#if defined(WOLFSSL_AES_XTS)
+        case EM_XTS: // for AES
+            exec = cryptoSTE_aes_xts_256_timed;
+            break;
+#endif            
         default:
             break;
     }
@@ -252,14 +280,30 @@ cryptoSTE_exec_t cryptoSTE_identifyTest(const cryptoST_testDetail_t * rv)
                 exec = cryptoSTE_aes_ccm_timed;
             break;
 #endif
+//#if defined(HAVE_AESXTS)//implemented in sortOutAES128 etc
+//        case ET_AES_XTS:
+//            if (EM_NONE == rv->mode)
+//                exec = cryptoSTE_aes_gcm_timed;
+//            break;
+//#endif
+            
 #if !defined(NO_SHA256)
-        case ET_SHA_128:
+        case ET_SHA_1  :
         case ET_SHA_224:
         case ET_SHA_256:
         case ET_SHA_384:
         case ET_SHA_512: exec = cryptoSTE_crya_sha_timed;
             break;
 #endif
+        case ET_MD5: 
+#if !defined(NO_MD5)
+            exec = cryptoSTE_crya_md5_timed;
+            break;
+#else            
+            exec = NULL;
+            break;            
+#endif
+            
 #if !defined(NO_RSA)
         case ET_PK_RSA_SIGN:
         case ET_PK_RSA_VERIFY:
@@ -269,8 +313,7 @@ cryptoSTE_exec_t cryptoSTE_identifyTest(const cryptoST_testDetail_t * rv)
 #endif
         case ET_MD2:
         case ET_MD3:
-        case ET_MD4:
-        case ET_MD5:
+        case ET_MD4:     
         case ET_MD6:
         default:
             exec = NULL;
@@ -432,7 +475,7 @@ void cryptoSTE(cryptoSTE_localData_t * thisTest)
                     // result announcement (its already been done),
                     // but if we are showing CSV then include this result.
                     if (config->results.encryption.startStopIsValid
-                      || (CST_CSV == config->parameters.displayType))
+                                || (CST_CSV == config->parameters.displayType))
                     {
                         cryptoST_PRINT_announceElapsedTime( cv->name, config);
                     }
@@ -443,6 +486,7 @@ void cryptoSTE(cryptoSTE_localData_t * thisTest)
                                 config->results.testHandler?
                                     config->results.testHandler : "--");
                     }
+                    
                 }
             }
 

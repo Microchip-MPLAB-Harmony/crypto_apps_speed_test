@@ -68,6 +68,7 @@
           <itemPath>../src/config/pic32mz_ef_starterkit_sw/device.h</itemPath>
           <itemPath>../src/config/pic32mz_ef_starterkit_sw/user.h</itemPath>
           <itemPath>../src/config/pic32mz_ef_starterkit_sw/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mz_ef_starterkit_sw/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="wolfcrypt" projectFiles="true">
@@ -205,6 +206,7 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sha512.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/wc_port.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/certs_test.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/rc2.h</itemPath>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
@@ -317,6 +319,12 @@
         <itemPath>../src/cryptoST/cryptoSTE_utility.h</itemPath>
         <itemPath>../src/cryptoST/cryptoST_buildInfo.c</itemPath>
         <itemPath>../src/cryptoST/cryptoST_execute.h</itemPath>
+        <itemPath>../src/cryptoST/cryptoSTE_aes_ofb.c</itemPath>
+        <itemPath>../src/cryptoST/cryptoSTE_aes_ofb.h</itemPath>
+        <itemPath>../src/cryptoST/cryptoSTE_aes_xts.c</itemPath>
+        <itemPath>../src/cryptoST/cryptoSTE_aes_xts.h</itemPath>
+        <itemPath>../src/cryptoST/cryptoSTE_md5.c</itemPath>
+        <itemPath>../src/cryptoST/cryptoSTE_md5.h</itemPath>
       </logicalFolder>
       <logicalFolder name="test_data" displayName="test_data" projectFiles="true">
         <itemPath>../test_data/cryptoSpeedTestData.h</itemPath>
@@ -356,6 +364,12 @@
         <itemPath>../test_data/cryptoSTD_wolfSSL_aes_gcm.h</itemPath>
         <itemPath>../test_data/cryptoSTD_zero_aes.c</itemPath>
         <itemPath>../test_data/cryptoSTD_zero_aes.h</itemPath>
+        <itemPath>../test_data/cryptoSTD_all_msgSize.c</itemPath>
+        <itemPath>../test_data/cryptoSTD_all_msgSize.h</itemPath>
+        <itemPath>../test_data/cryptoSTD_wolfSSL_aes_ofb.c</itemPath>
+        <itemPath>../test_data/cryptoSTD_wolfSSL_aes_ofb.h</itemPath>
+        <itemPath>../test_data/cryptoSTD_wolfSSL_aes_xts.c</itemPath>
+        <itemPath>../test_data/cryptoSTD_wolfSSL_aes_xts.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="wolfcrypt" projectFiles="true">
         <logicalFolder name="f1" displayName="port" projectFiles="true">
@@ -450,6 +464,7 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sha.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sha256.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sha512.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/rc2.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
@@ -457,12 +472,28 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
+      <logicalFolder name="f2"
+                     displayName="pic32mz_ef_starterkit_sw.mhc"
+                     projectFiles="true">
+        <itemPath>../src/config/pic32mz_ef_starterkit_sw/pic32mz_ef_starterkit_sw.mhc/BSP_PIC32MZ_EF_Starter_Kit.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_starterkit_sw/pic32mz_ef_starterkit_sw.mhc/core.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_starterkit_sw/pic32mz_ef_starterkit_sw.mhc/core_timer.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_starterkit_sw/pic32mz_ef_starterkit_sw.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_starterkit_sw/pic32mz_ef_starterkit_sw.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_starterkit_sw/pic32mz_ef_starterkit_sw.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_starterkit_sw/pic32mz_ef_starterkit_sw.mhc/lib_crypto.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_starterkit_sw/pic32mz_ef_starterkit_sw.mhc/lib_wolfcrypt.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_starterkit_sw/pic32mz_ef_starterkit_sw.mhc/project.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_starterkit_sw/pic32mz_ef_starterkit_sw.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_starterkit_sw/pic32mz_ef_starterkit_sw.mhc/stdio.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_starterkit_sw/pic32mz_ef_starterkit_sw.mhc/sys_time.yml</itemPath>
+        <itemPath>../src/config/pic32mz_ef_starterkit_sw/pic32mz_ef_starterkit_sw.mhc/uart2.yml</itemPath>
+      </logicalFolder>
       <logicalFolder name="f1" displayName="wolfcrypt" projectFiles="true">
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/misc.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/evp.c</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mz_ef_starterkit_sw/harmony.prj</itemPath>
       <itemPath>../src/config/pic32mz_ef_starterkit_sw/PIC32MZ_EF_starterKit_sw.xml</itemPath>
       <itemPath>../src/config/pic32mz_ef_starterkit_sw/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
@@ -479,9 +510,9 @@
         <targetDevice>PIC32MZ2048EFM144</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>ICD4Tool</platformTool>
+        <platformTool>PKOBSKDEPlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.41</languageToolchainVersion>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -523,7 +554,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mz_ef_starterkit_sw;../src/packs/PIC32MZ2048EFM144_DFP;../src/third_party/wolfssl/wolfssl;../src/third_party/wolfssl"/>
+                  value="../src;../src/config/pic32mz_ef_starterkit_sw;../src/packs/PIC32MZ2048EFM144_DFP;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -533,7 +564,7 @@
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
-                  value="WOLFSSL_IGNORE_FILE_WARN;HAVE_CONFIG_H"/>
+                  value="HAVE_CONFIG_H;WOLFSSL_IGNORE_FILE_WARN"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="toplevel-reordering" value=""/>
@@ -832,6 +863,32 @@
         <property key="programoptions.uselvpprogramming" value="false"/>
         <property key="voltagevalue" value="3.25"/>
       </PICkit3PlatformTool>
+      <PKOBSKDEPlatformTool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="firmware.download.all" value="false"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges" value="1d000000-1d1fffff"/>
+        <property key="memories.userotp" value="true"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges" value=""/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges"
+                  value="${memories.eedata.default}"/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="true"/>
+      </PKOBSKDEPlatformTool>
       <pk4hybrid>
         <property key="ADC" value="true"/>
         <property key="AutoSelectMemRanges" value="auto"/>

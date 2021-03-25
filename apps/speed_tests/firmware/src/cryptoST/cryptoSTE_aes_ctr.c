@@ -110,9 +110,11 @@ static const char * cryptoSTE_aes_ctr_timed(const cryptoST_testDetail_t * td,
     
     Aes enc;
     int ret = 0;
-    byte cipher[AES_BLOCK_SIZE * 4];
-    if (vector->vector.length > ALENGTH(cipher))
-        return "input too big (" __BASE_FILE__ " line " BASE_LINE ")";
+    
+    byte* cipher = (byte*)malloc(vector->vector.length);
+    
+    if (NULL == cipher)
+        return "cannot allocate memory (" __BASE_FILE__ " line " BASE_LINE ")";
     
     ret = wc_AesSetKeyDirect(&enc, td->io.sym.in.key.data, td->io.sym.in.key.length,
                                 td->io.sym.in.ivNonce.data, AES_ENCRYPTION);
@@ -138,10 +140,13 @@ static const char * cryptoSTE_aes_ctr_timed(const cryptoST_testDetail_t * td,
                                 param->parameters.iterationOverride
                                   : td->recommendedRepetitions;
     param->results.encryption.size = vector->vector.length;
+    
+
     param->results.encryption.start = SYS_TIME_CounterGet();
     for (int i = param->results.encryption.iterations; i > 0; i--)
     {
-        ret = wc_AesCtrEncrypt(&enc, cipher, vector->vector.data, testLength);
+        ret = wc_AesCtrEncrypt(&enc, cipher, vector->vector.data, 
+                                             vector->vector.length);
         if (ret != 0) return "encryption failed (" BASE_LINE ")";
     }
     param->results.encryption.stop = SYS_TIME_CounterGet();
@@ -209,6 +214,7 @@ static const char * cryptoSTE_aes_ctr_timed(const cryptoST_testDetail_t * td,
             return "recovered data does not match original";
         }
     }
+    free(cipher);
     return 0;
 }
 

@@ -18,6 +18,7 @@
                 <sourceRootElem>D:/D_git/mh3/crypto/apps/speed_tests/firmware/test_data</sourceRootElem>
                 <sourceRootElem>D:/D_git/mh3/crypto/drivers/TrustZone</sourceRootElem>
                 <sourceRootElem>D:/D_git/mh3/crypto/drivers/crya</sourceRootElem>
+                <sourceRootElem>../test_data</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

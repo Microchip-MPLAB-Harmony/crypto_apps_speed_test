@@ -92,12 +92,14 @@ char * ansi_itoa(int value, char *string, int radix)
 // *****************************************************************************
 /* The magic here is that size_t is different in ARM and MIPS,
  * so we up-cast it to UL for the printf's. */
-void cryptoST_PRINT_announceElapsedTime_TEXT(cryptoSTE_results_t * testData)
+void cryptoST_PRINT_announceElapsedTime_TEXT(cryptoSTE_results_t * testData,
+        cryptoSTE_parameters_t* param)
 {
     PRINT(">> ");
     PRINT(testData->testHandler);
-    P0_UINT( " enc=", testData->encryption.size);
-
+    //    P0_UINT( " enc=", testData->encryption.size);
+    printf(" enc=%5d", (int)(testData->encryption.size));
+    
     const long unsigned int delta = 
         testData->encryption.stop - testData->encryption.start;
     if (CSTE_VERBOSE > 1)
@@ -109,21 +111,30 @@ void cryptoST_PRINT_announceElapsedTime_TEXT(cryptoSTE_results_t * testData)
     const uint32_t time = SYS_TIME_CountToUS(delta);
     uint32_t const iterate = testData->encryption.iterations;
     
-    // Want to show the average to 3 decimal places (using integer arithmetic)
-    const uint32_t intAverage = time/iterate;
-    const uint32_t remainder = time - (intAverage * iterate);
-    const uint32_t fraction = ((1000 * remainder) + (iterate/2))/iterate;
+    double secsTimesOneESix = time; /*microseconds*/
+    double megaBytesTimesOneE6;
+    secsTimesOneESix = secsTimesOneESix / (double)testData->encryption.iterations;
+    megaBytesTimesOneE6 = testData->encryption.size;/*bytes*/
+    const double MBps = (megaBytesTimesOneE6) / secsTimesOneESix;
     
+    printf(", %3d.%03d MBps, ", (int)MBps, 
+                               ((int)(1000.0*MBps)%((int)1000))//decimal of MBps 
+          );
+    // Want to show the average to 3 decimal places (using integer arithmetic)
+//    const uint32_t intAverage = time/iterate;
+//    const uint32_t remainder = time - (intAverage * iterate);
+    //const uint32_t fraction = ((1000 * remainder) + (iterate/2))/iterate;
     if(testData->encryption.startStopIsValid)
-        printf(" %10lu us on %lu iterations (%lu.%03lu us average)", 
-                    (long unsigned int)time, 
-                    (long unsigned int)iterate, 
+        printf(" %10lu us",// on %lu iterations (%lu.%03lu us average)", 
+                    (long unsigned int)time//, 
+                    /*(long unsigned int)iterate, 
                     (long unsigned int)intAverage, 
-                    (long unsigned int)fraction);
+                    (long unsigned int)fraction*/);
     else
         printf(" no time recorded on %lu iterations", 
                     (long unsigned int)iterate);
-
+    
+    printf(" , avg. of %d iterations", (int)testData->encryption.iterations);
     if (testData->errorMessage)
         printf("; test completed with error");
     
@@ -249,7 +260,7 @@ void cryptoST_PRINT_announceElapsedTime
     switch(config->parameters.displayType)
     {
     case CST_TEXT:
-        cryptoST_PRINT_announceElapsedTime_TEXT(&config->results);
+        cryptoST_PRINT_announceElapsedTime_TEXT(&config->results, &config->parameters);
         break;
     case CST_CSV:
         cryptoST_PRINT_announceElapsedTime_CSV

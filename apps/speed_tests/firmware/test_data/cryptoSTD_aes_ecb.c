@@ -74,7 +74,7 @@ static const CPU_CHAR description[] =
 static cryptoST_testVector_t softData =
 {
     .name = DATA_PACKAGE_NAME "_bigBlocks",
-    .source = "Micrchip applications",
+    .source = "Microchip applications",
     .description = description,
     .vector.data = NULL, // for now
     .vector.length = 0
@@ -88,9 +88,9 @@ static cryptoST_testDetail_t test_item = // one and only
     .technique = ET_AES_128,
     .mode = EM_ECB,
     .recommendedRepetitions = 1000,
-
     .source = __BASE_FILE__,
     .pedigree = description,
+
     .rawData = &softData,
     .io.sym.out.cipher = {
         .data = ((void*)0), // fill in later

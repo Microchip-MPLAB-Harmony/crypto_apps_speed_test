@@ -251,7 +251,7 @@ static const ecbTest_t wolf_128 = {
 #endif
 #if defined(WOLFSSL_AES_192)
 static const ecbTest_t wolf_192 = {
-    .name = "WOLF AES ECB 128",
+    .name = "WOLF AES ECB 192",
     .keySize = 192/8,
     .setKey  = wc_AesSetKey,
     .encrypt = wc_AesEcbEncrypt,
@@ -260,7 +260,7 @@ static const ecbTest_t wolf_192 = {
 #endif
 #if defined(WOLFSSL_AES_256)
 static const ecbTest_t wolf_256 = {
-    .name = "WOLF AES ECB 128",
+    .name = "WOLF AES ECB 256",
     .keySize = 256/8,
     .setKey  = wc_AesSetKey,
     .encrypt = wc_AesEcbEncrypt,
@@ -300,7 +300,7 @@ static const char * cryptoSTE_aes_ecb_all_timed(const cryptoST_testDetail_t * td
     // Data validation
     if (NULL == td->io.sym.in.key.data)
         return param->results.errorMessage = "missing key or initialization data";
-
+    
     byte * cipher = cryptoSTE_malloc(vector->vector.length);
     if (NULL == cipher)
         return "cannot allocate memory (" __BASE_FILE__ " line " BASE_LINE ")";
@@ -322,13 +322,13 @@ static const char * cryptoSTE_aes_ecb_all_timed(const cryptoST_testDetail_t * td
 
         // Remove any data noise that is in the target buffer
         XMEMSET(cipher, 0, sizeof(cipher));
-
         param->results.encryption.start = SYS_TIME_CounterGet();
         for (int i = param->results.encryption.iterations; i > 0; i--)
         {
             /* Note: if vector.length is not a multiple of 16,
              *       the default encryptor will ignore the remnant. */
-            (test->encrypt)(&enc, cipher, vector->vector.data, vector->vector.length);
+            (test->encrypt)(&enc, cipher, vector->vector.data, 
+                                          vector->vector.length);
         }
         param->results.encryption.stop = SYS_TIME_CounterGet();
         if (param->results.errorMessage) break; // out of the test routine

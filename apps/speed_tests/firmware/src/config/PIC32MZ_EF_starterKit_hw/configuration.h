@@ -134,6 +134,10 @@ extern "C" {
 #define HAVE_AES_ECB
 #define HAVE_AES_CBC
 #define WOLFSSL_AES_COUNTER
+#define WOLFSSL_AES_CFB
+#define WOLFSSL_AES_OFB
+#define HAVE_AESGCM
+#define WOLFSSL_AES_XTS
 #define HAVE_AESCCM
 #define NO_RC4
 #define NO_HC128
@@ -146,6 +150,7 @@ extern "C" {
 #define HAVE_HASHDRBG
 #define WC_NO_HARDEN
 #define SINGLE_THREADED
+#define NO_SIG_WRAPPER
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
 // ---------- FUNCTIONAL CONFIGURATION END ----------

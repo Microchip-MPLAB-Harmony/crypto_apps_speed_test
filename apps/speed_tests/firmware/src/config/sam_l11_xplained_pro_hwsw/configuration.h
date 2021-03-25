@@ -117,21 +117,20 @@ extern "C" {
 #define HAVE_MCAPI
 #define WOLF_CRYPTO_CB  // provide call-back support
 #define WOLFCRYPT_ONLY
+// ---------- FUNCTIONAL CONFIGURATION START ----------
 #define NO_MD4
 #define NO_MD5
 #define NO_SHA // specifically, no SHA1 (legacy name)
 #define NO_SHA224
-#define WOLFSSL_SHA384
-#define WOLFSSL_SHA512
-#define HAVE_SHA512
 #define NO_HMAC
 #define WOLFSSL_DES_ECB
 #define WOLFSSL_AES_128
-#define NO_AES_192
-#define NO_AES_256
+#define NO_AES_192 // not supported by HW accelerator
+#define NO_AES_256 // not supported by HW accelerator
 #define WOLFSSL_AES_DIRECT
 #define HAVE_AES_DECRYPT
-#define NO_AES_CBC
+#define HAVE_AES_ECB
+#define HAVE_AES_CBC
 #define NO_RC4
 #define NO_HC128
 #define NO_RABBIT
@@ -147,6 +146,7 @@ extern "C" {
 #define NO_SIG_WRAPPER
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
+#define WOLFSSL_AES_SMALL_TABLES
 
 
 

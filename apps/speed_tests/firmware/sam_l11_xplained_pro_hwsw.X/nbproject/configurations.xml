@@ -73,6 +73,8 @@
           <itemPath>../src/config/sam_l11_xplained_pro_hwsw/device.h</itemPath>
           <itemPath>../src/config/sam_l11_xplained_pro_hwsw/user.h</itemPath>
           <itemPath>../src/config/sam_l11_xplained_pro_hwsw/configuration.h</itemPath>
+          <itemPath>../src/config/sam_l11_xplained_pro_hwsw/interrupts.h</itemPath>
+          <itemPath>../src/config/sam_l11_xplained_pro_hwsw/device_vectors.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="cryptoST" displayName="cryptoST" projectFiles="true">
@@ -131,10 +133,44 @@
             <itemPath>../src/packs/ATSAML11E16A_DFP/component/trng.h</itemPath>
             <itemPath>../src/packs/ATSAML11E16A_DFP/component/wdt.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/ac.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/adc.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/ccl.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/dac.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/dmac.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/dsu.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/eic.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/freqm.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/gclk.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/idau.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/mclk.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/nvmctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/opamp.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/osc32kctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/oscctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/pac.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/pm.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/port.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/ptc.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/rstc.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/sercom0.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/sercom1.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/sercom2.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/supc.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/tc0.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/tc1.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/tc2.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/tram.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/trng.h</itemPath>
+            <itemPath>../src/packs/ATSAML11E16A_DFP/instance/wdt.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAML11E16A_DFP/pio/saml11e16a.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/packs/ATSAML11E16A_DFP/atsaml11e16a.h</itemPath>
+          <itemPath>../src/packs/ATSAML11E16A_DFP/saml11e16a.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
           <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
@@ -291,6 +327,7 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sha512.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/wc_port.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/certs_test.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/rc2.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="zlib" projectFiles="true">
         <itemPath>../src/third_party/zlib/crc32.h</itemPath>
@@ -423,6 +460,12 @@
         <itemPath>../test_data/cryptoSTD_wolfSSL_aes_ctr.c</itemPath>
         <itemPath>../test_data/cryptoSTD_wolfSSL_aes_gcm.c</itemPath>
         <itemPath>../test_data/cryptoSTD_zero_aes.c</itemPath>
+        <itemPath>../test_data/cryptoSTD_all_msgSize.c</itemPath>
+        <itemPath>../test_data/cryptoSTD_all_msgSize.h</itemPath>
+        <itemPath>../test_data/cryptoSTD_wolfSSL_aes_ofb.c</itemPath>
+        <itemPath>../test_data/cryptoSTD_wolfSSL_aes_ofb.h</itemPath>
+        <itemPath>../test_data/cryptoSTD_wolfSSL_aes_xts.c</itemPath>
+        <itemPath>../test_data/cryptoSTD_wolfSSL_aes_xts.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="wolfcrypt" projectFiles="true">
         <logicalFolder name="f1" displayName="port" projectFiles="true">
@@ -517,6 +560,7 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sha.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sha256.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sha512.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/rc2.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="zlib" projectFiles="true">
         <itemPath>../src/third_party/zlib/adler32.c</itemPath>
@@ -539,6 +583,28 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
+      <logicalFolder name="f2"
+                     displayName="sam_l11_xplained_pro_hwsw.mhc"
+                     projectFiles="true">
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/BSP_SAM_L11_Xplained_Pro.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/cmsis.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/core.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/evsys.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/lib_crypto.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/lib_wolfcrypt.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/lib_zlib.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/nvmctrl.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/pm.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/project.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/sercom0.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/stdio.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/sys_time.yml</itemPath>
+        <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.mhc/tc0.yml</itemPath>
+      </logicalFolder>
       <logicalFolder name="f1" displayName="wolfcrypt" projectFiles="true">
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/misc.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/evp.c</itemPath>
@@ -546,8 +612,6 @@
       <itemPath>Makefile</itemPath>
       <itemPath>dist/sam_l11_xplained_pro_hwsw/debug/sam_l11_xplained_pro_hwsw.X.debug.elf</itemPath>
       <itemPath>dist/sam_l11_xplained_pro_hwsw/debug/sam_l11_xplained_pro_hwsw.X.debug.map</itemPath>
-      <itemPath>../src/config/sam_l11_xplained_pro_hwsw/harmony.prj</itemPath>
-      <itemPath>../src/config/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw.xml</itemPath>
       <itemPath>../src/config/sam_l11_xplained_pro_hwsw/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
@@ -557,6 +621,7 @@
     <Elem>D:/D_git/mh3/crypto/apps/speed_tests/firmware/test_data</Elem>
     <Elem>D:/D_git/mh3/crypto/drivers/TrustZone</Elem>
     <Elem>D:/D_git/mh3/crypto/drivers/crya</Elem>
+    <Elem>../test_data</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -568,11 +633,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.41</languageToolchainVersion>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAML11_DFP" vendor="Microchip" version="4.0.114"/>
+        <pack name="SAML11_DFP" vendor="Microchip" version="4.2.130"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
@@ -594,6 +659,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>true</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep>touch ../src/cryptoST/cryptoSTE_buildInfo.c</makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -634,7 +700,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/third_party/zlib;../src/third_party/wolfssl/wolfssl;../src/third_party/wolfssl;../src;../src/config/sam_l11_xplained_pro_hwsw;../src/packs/ATSAML11E16A_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/sam_l11_xplained_pro_hwsw;../src/packs/ATSAML11E16A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl;../src/third_party/zlib"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -644,7 +710,7 @@
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
-                  value="WOLFSSL_IGNORE_FILE_WARN;HAVE_CONFIG_H"/>
+                  value="HAVE_CONFIG_H;WOLFSSL_IGNORE_FILE_WARN"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="toplevel-reordering" value=""/>
@@ -709,7 +775,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value="RS=16000;AS=65500;ANSC=1024;SECURE"/>
+        <property key="preprocessor-macros" value="ANSC=1024;AS=65500;RS=16000;SECURE"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -732,7 +798,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_l11_xplained_pro_hwsw;../src/packs/ATSAML11E16A_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/sam_l11_xplained_pro_hwsw;../src/packs/ATSAML11E16A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -776,6 +842,7 @@
         <property key="firmware.toolpack"
                   value="Press to select which tool pack to use"/>
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
+        <property key="freeze.timers" value="false"/>
         <property key="lastid" value=""/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
@@ -790,7 +857,10 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-ffff"/>
+        <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Git/crypto_apps_speed_test/apps/speed_tests/firmware/sam_l11_xplained_pro_hwsw.X/debug/sam_l11_xplained_pro_hwsw/sam_l11_xplained_pro_hwsw_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
@@ -801,6 +871,7 @@
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
+        <property key="script.has_reset" value="true"/>
         <property key="script.log_level" value="0"/>
         <property key="script.reset_delay" value="0"/>
         <property key="script.show_output" value="false"/>
@@ -811,6 +882,8 @@
         <property key="voltagevalue" value=""/>
         <property key="x.erase.key" value="0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF"/>
         <property key="x.erase.type" value="ChipEraseAll"/>
+        <property key="x.tz_computecrc" value="true"/>
+        <property key="x.tz_computesign" value="true"/>
       </EdbgTool>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>

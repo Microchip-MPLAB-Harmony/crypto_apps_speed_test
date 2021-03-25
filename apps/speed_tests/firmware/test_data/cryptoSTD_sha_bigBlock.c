@@ -57,7 +57,7 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 #if defined(__SAML11E16A__) // compiler pre-defined
 #define ZERO_MAX    (512*3)
 #else
-#define ZERO_MAX    (5 * 1024)
+#define ZERO_MAX    (10 * 1024)
 #endif
 
 
@@ -80,7 +80,7 @@ static cryptoST_testVector_t satcZ =
 static uint8_t sramBuffer32[32] = { 0 };
 #define ASIZE(a) ((sizeof(a)/sizeof(a[0])))
 
-static const cryptoST_testDetail_t test_item =
+static cryptoST_testDetail_t test_item =
 {
     .technique = ET_SHA_256,
     .mode = EM_NONE,

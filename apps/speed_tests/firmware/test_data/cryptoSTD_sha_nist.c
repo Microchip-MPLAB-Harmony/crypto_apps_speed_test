@@ -66,7 +66,10 @@ static const CPU_CHAR sha_all[] =
     "http://csrc.nist.gov/groups/ST/toolkit/documents/Examples/SHA_All.pdf";
 static const CPU_CHAR sha_all_description[] =
     "NIST Computer Security Division standard test cases.";
-
+#if defined(WOLFSSL_SHA3)
+static const CPU_CHAR sha_3[] = 
+    "https://www.di-mgt.com.au/sha_testvectors.html";
+#endif    
 static const cryptoST_testVector_t abc_3 =
 {
     .name = DATA_PACKAGE_NAME "_abc3",
@@ -102,7 +105,7 @@ static __attribute__((unused)) const cryptoST_testDetail_t test_item[] =
 {
 #if !defined(NO_SHA) // SHA1
     {
-        .technique = ET_SHA_128,
+        .technique = ET_SHA_1,
         .mode = EM_NONE,
         .recommendedRepetitions = 1000,
 
@@ -120,7 +123,7 @@ static __attribute__((unused)) const cryptoST_testDetail_t test_item[] =
         },
     },
     {
-        .technique = ET_SHA_128,
+        .technique = ET_SHA_1,
         .mode = EM_NONE,
         .recommendedRepetitions = 1000,
 
@@ -340,6 +343,253 @@ static __attribute__((unused)) const cryptoST_testDetail_t test_item[] =
         },
     },
 #endif // SHA512
+#if defined(WOLFSSL_SHA3)
+    {
+        .technique = ET_SHA3_224,
+        .mode = EM_NONE,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = sha_3,
+        .rawData = &abc_3,
+        .io.hash.out.hash = {
+            .length = 28,
+            .data = (uint8_t[]){ "\xe6\x42\x82\x4c"
+                                 "\x3f\x8c\xf2\x4a"
+                                 "\xd0\x92\x34\xee"
+                                 "\x7d\x3c\x76\x6f"
+                                 "\xc9\xa3\xa5\x16"
+                                 "\x8d\x0c\x94\xad"
+                                 "\x73\xb4\x6f\xdf",
+            },
+        },
+    },
+    {
+        .technique = ET_SHA3_224,
+        .mode = EM_NONE,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = sha_3,
+        .rawData = &abc_56,
+        .io.hash.out.hash = {
+            .length = 28,
+            .data = (uint8_t[]){ "\x8a\x24\x10\x8b"
+                                 "\x15\x4a\xda\x21"
+                                 "\xc9\xfd\x55\x74"
+                                 "\x49\x44\x79\xba"
+                                 "\x5c\x7e\x7a\xb7"
+                                 "\x6e\xf2\x64\xea"
+                                 "\xd0\xfc\xce\x33",
+            },
+        },
+    },    
+    
+    {
+        .technique = ET_SHA3_224,
+        .mode = EM_NONE,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = sha_3,
+        .rawData = &abc_112,
+        .io.hash.out.hash = {
+            .length = 28,
+            .data = (const uint8_t[]){
+                0x54, 0x3e, 0x68, 0x68, 0xe1, 0x66, 0x6c, 0x1a, 
+                0x64, 0x36, 0x30, 0xdf, 0x77, 0x36, 0x7a, 0xe5, 
+                0xa6, 0x2a, 0x85, 0x07, 0x0a, 0x51, 0xc1, 0x4c, 
+                0xbf, 0x66, 0x5c, 0xbc,
+            },
+        },
+    },
+#if !defined(NO_SHA3_256)
+    {
+        .technique = ET_SHA3_256,
+        .mode = EM_NONE,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = sha_3,
+        .rawData = &abc_3,
+        .io.hash.out.hash = {
+            .length = 32,
+            .data = (ALIGN4 const uint8_t[]){
+                0x3a, 0x98, 0x5d, 0xa7, 0x4f, 0xe2, 0x25, 0xb2, 
+                0x04, 0x5c, 0x17, 0x2d, 0x6b, 0xd3, 0x90, 0xbd, 
+                0x85, 0x5f, 0x08, 0x6e, 0x3e, 0x9d, 0x52, 0x5b, 
+                0x46, 0xbf, 0xe2, 0x45, 0x11, 0x43, 0x15, 0x32
+            },
+        },
+    },
+    {
+        .technique = ET_SHA3_256,
+        .mode = EM_NONE,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = sha_3,
+        .rawData = &abc_56,
+        .io.hash.out.hash = {
+            .length = 32,
+            .data = (const uint8_t[]){
+                0x41, 0xc0, 0xdb, 0xa2, 0xa9, 0xd6, 0x24, 0x08, 
+                0x49, 0x10, 0x03, 0x76, 0xa8, 0x23, 0x5e, 0x2c, 
+                0x82, 0xe1, 0xb9, 0x99, 0x8a, 0x99, 0x9e, 0x21, 
+                0xdb, 0x32, 0xdd, 0x97, 0x49, 0x6d, 0x33, 0x76
+            },
+        },
+    },
+    {
+        .technique = ET_SHA3_256,
+        .mode = EM_NONE,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = sha_3,
+        .rawData = &abc_112,
+        .io.hash.out.hash = {
+            .length = 32,
+            .data = (const uint8_t[]){
+                0x91, 0x6f, 0x60, 0x61, 0xfe, 0x87, 0x97, 0x41, 
+                0xca, 0x64, 0x69, 0xb4, 0x39, 0x71, 0xdf, 0xdb, 
+                0x28, 0xb1, 0xa3, 0x2d, 0xc3, 0x6c, 0xb3, 0x25, 
+                0x4e, 0x81, 0x2b, 0xe2, 0x7a, 0xad, 0x1d, 0x18
+            },
+        },
+    },
+#endif // !NO_SHA256
+#if defined(WOLFSSL_SHA3_384)
+    {
+        .technique = ET_SHA3_384,
+        .mode = EM_NONE,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = sha_3,
+        .rawData = &abc_3,
+        .io.hash.out.hash = {
+            .length = 48,
+            .data = (const uint8_t[]){
+                0xec, 0x01, 0x49, 0x82, 0x88, 0x51, 0x6f, 0xc9, 
+                0x26, 0x45, 0x9f, 0x58, 0xe2, 0xc6, 0xad, 0x8d, 
+                0xf9, 0xb4, 0x73, 0xcb, 0x0f, 0xc0, 0x8c, 0x25, 
+                0x96, 0xda, 0x7c, 0xf0, 0xe4, 0x9b, 0xe4, 0xb2, 
+                0x98, 0xd8, 0x8c, 0xea, 0x92, 0x7a, 0xc7, 0xf5, 
+                0x39, 0xf1, 0xed, 0xf2, 0x28, 0x37, 0x6d, 0x25
+            },
+        },
+    },
+    {
+        .technique = ET_SHA3_384,
+        .mode = EM_NONE,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = sha_3,
+        .rawData = &abc_56,
+        .io.hash.out.hash = {
+            .length = 48,
+            .data = (const uint8_t[]){
+                0x99, 0x1c, 0x66, 0x57, 0x55, 0xeb, 0x3a, 0x4b, 
+                0x6b, 0xbd, 0xfb, 0x75, 0xc7, 0x8a, 0x49, 0x2e, 
+                0x8c, 0x56, 0xa2, 0x2c, 0x5c, 0x4d, 0x7e, 0x42, 
+                0x9b, 0xfd, 0xbc, 0x32, 0xb9, 0xd4, 0xad, 0x5a, 
+                0xa0, 0x4a, 0x1f, 0x07, 0x6e, 0x62, 0xfe, 0xa1, 
+                0x9e, 0xef, 0x51, 0xac, 0xd0, 0x65, 0x7c, 0x22
+            },
+        },
+    },
+    {
+        .technique = ET_SHA3_384,
+        .mode = EM_NONE,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = sha_3,
+        .rawData = &abc_112,
+        .io.hash.out.hash = {
+            .length = 48,
+            .data = (const uint8_t[]){
+                0x79, 0x40, 0x7d, 0x3b, 0x59, 0x16, 0xb5, 0x9c, 
+                0x3e, 0x30, 0xb0, 0x98, 0x22, 0x97, 0x47, 0x91, 
+                0xc3, 0x13, 0xfb, 0x9e, 0xcc, 0x84, 0x9e, 0x40, 
+                0x6f, 0x23, 0x59, 0x2d, 0x04, 0xf6, 0x25, 0xdc, 
+                0x8c, 0x70, 0x9b, 0x98, 0xb4, 0x3b, 0x38, 0x52, 
+                0xb3, 0x37, 0x21, 0x61, 0x79, 0xaa, 0x7f, 0xc7
+            },
+        },
+    },
+#endif // SHA384    
+    {
+        .technique = ET_SHA3_512,
+        .mode = EM_NONE,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = sha_3,
+        .rawData = &abc_3,
+        .io.hash.out.hash = {
+            .length = 64,
+            .data = (const uint8_t[]){
+                0xb7, 0x51, 0x85, 0x0b, 0x1a, 0x57, 0x16, 0x8a, 
+                0x56, 0x93, 0xcd, 0x92, 0x4b, 0x6b, 0x09, 0x6e, 
+                0x08, 0xf6, 0x21, 0x82, 0x74, 0x44, 0xf7, 0x0d, 
+                0x88, 0x4f, 0x5d, 0x02, 0x40, 0xd2, 0x71, 0x2e, 
+                0x10, 0xe1, 0x16, 0xe9, 0x19, 0x2a, 0xf3, 0xc9, 
+                0x1a, 0x7e, 0xc5, 0x76, 0x47, 0xe3, 0x93, 0x40, 
+                0x57, 0x34, 0x0b, 0x4c, 0xf4, 0x08, 0xd5, 0xa5, 
+                0x65, 0x92, 0xf8, 0x27, 0x4e, 0xec, 0x53, 0xf0
+            },
+        },
+    },
+    {
+        .technique = ET_SHA3_512,
+        .mode = EM_NONE,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = sha_3,
+        .rawData = &abc_56,
+        .io.hash.out.hash = {
+            .length = 64,
+            .data = (const uint8_t[]){
+                0x04, 0xa3, 0x71, 0xe8, 0x4e, 0xcf, 0xb5, 0xb8, 
+                0xb7, 0x7c, 0xb4, 0x86, 0x10, 0xfc, 0xa8, 0x18, 
+                0x2d, 0xd4, 0x57, 0xce, 0x6f, 0x32, 0x6a, 0x0f, 
+                0xd3, 0xd7, 0xec, 0x2f, 0x1e, 0x91, 0x63, 0x6d, 
+                0xee, 0x69, 0x1f, 0xbe, 0x0c, 0x98, 0x53, 0x02, 
+                0xba, 0x1b, 0x0d, 0x8d, 0xc7, 0x8c, 0x08, 0x63, 
+                0x46, 0xb5, 0x33, 0xb4, 0x9c, 0x03, 0x0d, 0x99, 
+                0xa2, 0x7d, 0xaf, 0x11, 0x39, 0xd6, 0xe7, 0x5e
+            },
+        },
+    },
+    {
+        .technique = ET_SHA3_512,
+        .mode = EM_NONE,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = sha_3,
+        .rawData = &abc_112,
+        .io.hash.out.hash = {
+            .length = 64,
+            .data = (const uint8_t[]){
+                0xaf, 0xeb, 0xb2, 0xef, 0x54, 0x2e, 0x65, 0x79, 
+                0xc5, 0x0c, 0xad, 0x06, 0xd2, 0xe5, 0x78, 0xf9, 
+                0xf8, 0xdd, 0x68, 0x81, 0xd7, 0xdc, 0x82, 0x4d, 
+                0x26, 0x36, 0x0f, 0xee, 0xbf, 0x18, 0xa4, 0xfa, 
+                0x73, 0xe3, 0x26, 0x11, 0x22, 0x94, 0x8e, 0xfc, 
+                0xfd, 0x49, 0x2e, 0x74, 0xe8, 0x2e, 0x21, 0x89, 
+                0xed, 0x0f, 0xb4, 0x40, 0xd1, 0x87, 0xf3, 0x82, 
+                0x27, 0x0c, 0xb4, 0x55, 0xf2, 0x1d, 0xd1, 0x85
+            },
+        },
+    },
+#endif // SHA3
+
+
     {}
 };
 #define test_item_count ALENGTH(test_item)

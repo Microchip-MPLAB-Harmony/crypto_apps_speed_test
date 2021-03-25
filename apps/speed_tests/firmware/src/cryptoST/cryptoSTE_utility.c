@@ -72,7 +72,7 @@ enum wc_HashType cryptoSTE_get_wcHashType(EncryptTechnique_t mchp_type)
     case ET_MD6:
         // answer = ;
         break;
-    case ET_SHA_128: /* a.k.a. SHA or SHA1 */
+    case ET_SHA_1  : /* a.k.a. SHA or SHA1 */
         answer = WC_HASH_TYPE_SHA;
         break;
     case ET_SHA_224:

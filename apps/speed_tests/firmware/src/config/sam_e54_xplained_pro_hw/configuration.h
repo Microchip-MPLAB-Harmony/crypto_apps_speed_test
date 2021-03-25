@@ -118,12 +118,15 @@ extern "C" {
 #define WOLF_CRYPTO_CB  // provide call-back support
 #define WOLFCRYPT_ONLY
 #define WOLFSSL_HAVE_MCHP_HW_CRYPTO
+// ---------- CRYPTO HARDWARE MANIFEST START ----------
 #define WOLFSSL_HAVE_MCHP_HW_CRYPTO_ECC_HW_PUKCC
 #define WOLFSSL_HAVE_MCHP_HW_CRYPTO_AES_HW_U2238
 #define WOLFSSL_HAVE_MCHP_HW_CRYPTO_SHA_HW_11105
 #define WOLFSSL_HAVE_MCHP_HW_CRYPTO_SHA_HW_U2010
 #define WOLFSSL_HAVE_MCHP_HW_CRYPTO_TRNG_HW_U2242
 #define WOLFSSL_HAVE_MCHP_HW_CRYPTO_RSA_HW_PUKCC
+// ---------- CRYPTO HARDWARE MANIFEST END ----------
+// ---------- FUNCTIONAL CONFIGURATION START ----------
 #define NO_MD4
 #define NO_MD5
 #define WOLFSSL_HAVE_MCHP_HW_SHA1
@@ -148,24 +151,34 @@ extern "C" {
 #define WOLFSSL_AES_CFB
 #define HAVE_AESGCM
 #define WOLFSSL_HAVE_MCHP_HW_AES_GCM
+#define WOLFSSL_AES_XTS
 #define HAVE_AESCCM
 #define NO_RC4
 #define NO_HC128
 #define NO_RABBIT
+#define HAVE_ECC
+#define WOLFSSL_HAVE_MCHP_HW_ECC
 #define NO_DH
 #define NO_DSA
 #define WOLFSSL_HAVE_MCHP_HW_RSA
-#define FP_MAX_BITS 4096
+#define FP_MAX_BITS 8192
 #define USE_CERT_BUFFERS_2048
 #define WC_NO_RSA_OAEP
 #define NO_DEV_RANDOM
 #define WOLFSSL_HAVE_MCHP_HW_RANDOM
 #define HAVE_HASHDRBG
-#define WC_NO_HARDEN
+#define TFM_TIMING_RESISTANT
+#define ECC_TIMING_RESISTANT
+#define WC_RSA_BLINDING
 #define SINGLE_THREADED
+#define NO_SIG_WRAPPER
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
-
+#define WOLFSSL_AES_OFB
+#define WOLFSSL_AES_XTS
+#define NO_HMAC  //there was a build error with hmac; this avoids it
+#define WOLFSSL_DES_ECB
+    
 
 
 // *****************************************************************************

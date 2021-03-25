@@ -118,8 +118,8 @@ static const char * cryptoSTE_aes_cbc_timed(const cryptoST_testDetail_t * td,
     if ( (NULL == td->io.sym.in.key.data)
       || (NULL == td->io.sym.in.ivNonce.data) )
         return param->results.errorMessage = "missing key or initialization data";
-
-    byte * cipher = cryptoSTE_malloc(vector->vector.length);
+    byte* cipher = cryptoSTE_malloc(vector->vector.length);
+    
     if (NULL == cipher)
         return "cannot allocate memory (" __BASE_FILE__ " line " BASE_LINE ")";
     else do // so we can use "break"
@@ -131,7 +131,7 @@ static const char * cryptoSTE_aes_cbc_timed(const cryptoST_testDetail_t * td,
 
         // Hold off until the serial port is finished
         PRINT_WAIT_WHILE_BUSY();
-
+        
         // Remove any data noise that is in the target buffer
         XMEMSET(cipher, 0, sizeof(cipher));
         param->results.encryption.start = SYS_TIME_CounterGet();
@@ -224,7 +224,6 @@ static const char * cryptoSTE_aes_cbc_timed(const cryptoST_testDetail_t * td,
         }
     #endif /* HAVE_AES_DECRYPT */
     } while(0);
-    
     cryptoSTE_free(cipher);
     return param->results.errorMessage;
 }

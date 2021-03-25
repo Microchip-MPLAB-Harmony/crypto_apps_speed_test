@@ -238,7 +238,7 @@ static int RSASP1_ND(
     return wolfSSLresult;
 }
 
-/* EMSA-PKCS1-v1_5 reqiures that the given hash value be padded to a
+/* EMSA-PKCS1-v1_5 requires that the given hash value be padded to a
    fixed size block before encryption. */
 static uint8_t * PKCSpadding(uint8_t * bufferPtr, size_t PS)
 {
@@ -285,7 +285,6 @@ static const char * cryptoSTE_rsa_exptmod_timed
     static uint8_t rsaSignature[RSA_SIGNATURE_SIZE/8];
     memset(rsaSignature, 0, ALENGTH(rsaSignature));
     size_t rsaSize = 0;
-
     /* Initialize the buffers including the ANS1 header
      * before entering the timed loop. 
      * See the comment below about ASN1 header magic. */
@@ -298,16 +297,18 @@ static const char * cryptoSTE_rsa_exptmod_timed
     uint8_t * DER_data_ptr = hashed; // real data starts here
 
     if (0 != (param->results.wolfSSLresult = wc_InitRsaKey(&rsaKey, NULL)))
-    { param->results.errorMessage = "key initialization failed"; }
+    {   param->results.errorMessage = "key initialization failed";}
     else
     {
         /* Load the key structure with N and D before starting the timer. */
         if ((0 != mp_read_unsigned_bin(&rsaKey.n,
-            td->io.rsav.in.n->data, td->io.rsav.in.n->length))
+            td->io.rsav.in.n->data, td->io.rsav.in.n->length))   
             || (0 != mp_read_unsigned_bin(&rsaKey.d,
             td->io.rsav.in.d->data, td->io.rsav.in.d->length)))
-        { param->results.errorMessage = "key construction failed"; 
-        param->results.wolfSSLresult = -1; }
+        { 
+            param->results.errorMessage = "key construction failed"; 
+            param->results.wolfSSLresult = -1; 
+        }
         else
         {
             if (test->hash)
@@ -329,7 +330,7 @@ static const char * cryptoSTE_rsa_exptmod_timed
                 memcpy(DER_data_ptr, test->asn1_header, test->asn1_size);
                 ans1_exptmod_header_size = (DER_data_ptr - hashed) + test->asn1_size;
             }
-
+            
             param->results.encryption.start = SYS_TIME_CounterGet();
             for (int i = param->results.encryption.iterations; i > 0; i--)
             {
@@ -337,6 +338,7 @@ static const char * cryptoSTE_rsa_exptmod_timed
                 Required for RSASSA-PKCS1-V1_5-SIGN but not RSASP1. */
                 if (0 == test->hash)
                 {
+                    
                     /* Encrypt the given message. */
                     param->results.wolfSSLresult = RSASP1_ND(
                             td->io.rsav.in.em->data, td->io.rsav.in.em->length,
@@ -350,12 +352,11 @@ static const char * cryptoSTE_rsa_exptmod_timed
                             td->io.rsav.in.em, 
                             &hashed[ans1_exptmod_header_size]);
                     if (param->results.errorMessage) break;
-
                     /* ....then encrypt header and all. */
                     param->results.wolfSSLresult = RSASP1_ND(
                             hashed, ans1_exptmod_header_size + test->hashSize,
                             rsaSignature, ALENGTH(rsaSignature),
-                            &rsaKey, &param->results.errorMessage); 
+                            &rsaKey, &param->results.errorMessage);
                 }
 
                 /* For either path, mask any non-error results. */
@@ -371,7 +372,6 @@ static const char * cryptoSTE_rsa_exptmod_timed
             param->results.encryption.startStopIsValid =
                     (0 == param->results.errorMessage);
         }
-
         /* Success is when the recovered result matches the given result */
         const cryptoST_testData_t * const compare = &td->rawData->vector;
         if (0 == param->results.errorMessage)
@@ -453,7 +453,7 @@ static const char * cryptoSTE_rsa_sign_der_timed
     /* Statically defined to avoid overloading the stack. */
     static uint8_t rsaSignature[RSA_SIGNATURE_SIZE/8];
     memset(rsaSignature, 0, ALENGTH(rsaSignature));
-    size_t signatureLength = 0;
+    int signatureLength = 0;
 
     /* Initialize the buffers including the ANS1 header. 
      * See the comment below about ASN1 header magic. */
@@ -462,7 +462,9 @@ static const char * cryptoSTE_rsa_sign_der_timed
     uint8_t hashed[SHA_HEADER_SIZE + SHA_BUFFER_SIZE];
     memset(hashed, 0, ALENGTH(hashed));
     memcpy(hashed, test->asn1_header, test->asn1_size);
-
+    CRYPT_RNG_CTX* myRng = (CRYPT_RNG_CTX*)malloc(sizeof(CRYPT_RNG_CTX*));
+    CRYPT_RNG_Initialize(myRng);
+    
     param->results.encryption.start = SYS_TIME_CounterGet();
     for (int i = param->results.encryption.iterations; i > 0; i--)
     {
@@ -486,13 +488,12 @@ static const char * cryptoSTE_rsa_sign_der_timed
                 else
                 {
                     assert(td->io.rsas.in.der->length == index);
-
                     /* This call will fail if the buffer is too small. */
                     signatureLength = wc_RsaSSL_Sign
                             (hashed, // include ASN.1 header
                              test->asn1_size + test->hashSize,
                              rsaSignature, ALENGTH(rsaSignature),
-                             &rsaKey, 0); // no RNG
+                             &rsaKey, (WC_RNG *)myRng); // no RNG
                     if (signatureLength <= 0)
                     { 
                         param->results.errorMessage = "RsaSSL_Sign() failed";
@@ -502,13 +503,13 @@ static const char * cryptoSTE_rsa_sign_der_timed
                 wc_FreeRsaKey(&rsaKey);
             }
         }
-
+    
         if (param->results.errorMessage) break; // out of the test routine
     } // END TIMED LOOP
     param->results.encryption.stop = SYS_TIME_CounterGet();
     param->results.encryption.startStopIsValid =
             (0 == param->results.errorMessage);
-    
+    CRYPT_RNG_Deinitialize(myRng);
     /* Success is when the recovered result matches the hash result
      * in both length and content.   */
     if (0 == param->results.errorMessage)
@@ -526,9 +527,17 @@ static const char * cryptoSTE_rsa_sign_der_timed
         const cryptoST_testData_t * const compare = td->io.rsas.out.signature;
         printf(CRLF "%s", param->results.errorMessage);
         printAll_sign(td);
-        cryptoST_PRINT_hexBlock(CRLF "..computed:", rsaSignature, signatureLength);
-        cryptoST_PRINT_hexBlock(CRLF "..expected:", compare->data, compare->length);
-        printf(CRLF);
+        if(signatureLength < 2048 && signatureLength > 0)
+        {
+            cryptoST_PRINT_hexBlock(CRLF "2.computed:", rsaSignature, signatureLength);
+            cryptoST_PRINT_hexBlock(CRLF "..expected:", compare->data, compare->length);
+            printf(CRLF);
+        }
+        else
+        {
+            printf("signatureLength = %d", signatureLength);
+            printf(CRLF);
+        }
     }
     return param->results.errorMessage;
 }
@@ -629,9 +638,17 @@ static const char * cryptoSTE_rsa_verify_ne_timed
                                    computedSigLength, 
                 (unsigned long int)(test->asn1_size + test->hashSize));
         printAll_verify(td);
-        cryptoST_PRINT_hexBlock(CRLF "..computed:", rsaSignature, computedSigLength);
-        cryptoST_PRINT_hexBlock(CRLF "......hash:", hashSignature, ALENGTH(hashSignature));
-        printf(CRLF);
+        if(computedSigLength < 2048)
+        {
+            cryptoST_PRINT_hexBlock(CRLF "..computed:", rsaSignature, computedSigLength);
+            cryptoST_PRINT_hexBlock(CRLF "......hash:", hashSignature, ALENGTH(hashSignature));
+            printf(CRLF);
+        }
+        else
+        {
+            printf("computedSigLength = %d", computedSigLength);
+            printf(CRLF);
+        }
     }
     return param->results.errorMessage;
 }

@@ -190,7 +190,7 @@ static const char * cryptoSTE_aes_gcm_test_timed(
     results->C.length = input->vector.length; // rawSizePadded;
     results->T.data = (byte[AES_BLOCK_SIZE]){};
     results->T.length = AES_BLOCK_SIZE;
-    
+
     if (NULL == results->C.data) 
         param->results.errorMessage = 
                 "cannot allocate memory at " __FILE__ "(" BASE_LINE ")";
@@ -199,7 +199,8 @@ static const char * cryptoSTE_aes_gcm_test_timed(
         Aes enc;
         XMEMSET(results->C.data, 0, results->C.length);
         XMEMSET(results->T.data, 0, results->T.length);
-
+        
+        
         if (0 != wc_AesInit(&enc, HEAP_HINT, INVALID_DEVID))
         { param->results.errorMessage = "AesInit.enc failed (" BASE_LINE ")"; 
           break; }
@@ -213,9 +214,10 @@ static const char * cryptoSTE_aes_gcm_test_timed(
             int result = wc_AesGcmEncrypt(&enc, results->C.data,
                     input->vector.data, input->vector.length,
                     td->io.sym.in.ivNonce.data, td->io.sym.in.ivNonce.length,
-                    results->T.data, results->T.length,
+                   results->T.data, results->T.length,
                     td->io.sym.in.additionalAuthData.data, 
                             td->io.sym.in.additionalAuthData.length);
+
             // additional authentication data
 #if defined(WOLFSSL_ASYNC_CRYPT)
             results = wc_AsyncWait(results, &enc.asyncDev, WC_ASYNC_FLAG_NONE);

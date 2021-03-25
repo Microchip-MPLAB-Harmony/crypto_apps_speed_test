@@ -16,6 +16,7 @@
                 <sourceRootElem>../src</sourceRootElem>
                 <sourceRootElem>.</sourceRootElem>
                 <sourceRootElem>D:/D_git/mh3/crypto/apps/speed_tests/firmware/test_data</sourceRootElem>
+                <sourceRootElem>../test_data</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

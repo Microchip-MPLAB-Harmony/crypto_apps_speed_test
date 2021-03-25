@@ -130,10 +130,11 @@ static const char * cryptoSTE_aes_cfb_timed(const cryptoST_testDetail_t * td,
     
     Aes enc;
     int ret;
-
-    byte cipher[AES_BLOCK_SIZE * 4];
-    if (vector->vector.length > ALENGTH(cipher))
-        return "input too big (" __BASE_FILE__ " line " BASE_LINE ")";
+    
+    byte* cipher = (byte*)malloc(vector->vector.length);
+    
+    if (NULL == cipher)
+        return "cannot allocate memory (" __BASE_FILE__ " line " BASE_LINE ")";
     
     ret = wc_AesSetKey(&enc, td->io.sym.in.key.data, td->io.sym.in.key.length,
                              td->io.sym.in.ivNonce.data, AES_ENCRYPTION);
@@ -148,6 +149,7 @@ static const char * cryptoSTE_aes_cfb_timed(const cryptoST_testDetail_t * td,
                                 param->parameters.iterationOverride
                                   : td->recommendedRepetitions;
     param->results.encryption.size = vector->vector.length;
+    
     param->results.encryption.start = SYS_TIME_CounterGet();
     for (int i = param->results.encryption.iterations; i > 0; i--)
     {
@@ -186,10 +188,12 @@ static const char * cryptoSTE_aes_cfb_timed(const cryptoST_testDetail_t * td,
         else
         {
             Aes dec;
-            byte plain[AES_BLOCK_SIZE * 4];
-            if (vector->vector.length > ALENGTH(plain)) // TODO: use malloc()
-                return "input too big (" __BASE_FILE__ " line " BASE_LINE ")";
-
+    
+            byte* plain = (byte*)malloc(vector->vector.length);
+    
+            if (NULL == plain)
+                return "cannot allocate memory (" __BASE_FILE__ " line " BASE_LINE ")";
+    
             /* decrypt uses AES_ENCRYPTION */
             ret = wc_AesSetKey(&dec, td->io.sym.in.key.data, td->io.sym.in.key.length, 
                                      td->io.sym.in.ivNonce.data, AES_ENCRYPTION);
@@ -209,9 +213,11 @@ static const char * cryptoSTE_aes_cfb_timed(const cryptoST_testDetail_t * td,
                              td, cipher, plain);
                 return "recovered data does not match original";
             }
+            free(plain);
         }
     }
 #endif /* HAVE_AES_DECRYPT */
+    free(cipher);
     return 0;
 }
 

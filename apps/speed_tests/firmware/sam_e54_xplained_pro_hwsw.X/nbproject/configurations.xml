@@ -76,6 +76,8 @@
           <itemPath>../src/config/sam_e54_xplained_pro_hwsw/device.h</itemPath>
           <itemPath>../src/config/sam_e54_xplained_pro_hwsw/user.h</itemPath>
           <itemPath>../src/config/sam_e54_xplained_pro_hwsw/configuration.h</itemPath>
+          <itemPath>../src/config/sam_e54_xplained_pro_hwsw/interrupts.h</itemPath>
+          <itemPath>../src/config/sam_e54_xplained_pro_hwsw/device_vectors.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f3" displayName="packs" projectFiles="true">
@@ -121,10 +123,71 @@
             <itemPath>../src/packs/ATSAME54P20A_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/component/wdt.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/ac.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/adc0.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/adc1.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/aes.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/can0.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/can1.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/ccl.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/cmcc.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/dac.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/dmac.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/dsu.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/eic.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/freqm.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/gclk.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/gmac.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/hmatrix.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/i2s.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/icm.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/mclk.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/nvmctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/osc32kctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/oscctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/pac.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/pcc.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/pdec.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/pm.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/port.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/qspi.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/ramecc.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/rstc.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sdhc0.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sdhc1.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom0.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom1.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom2.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom3.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom4.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom5.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom6.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/sercom7.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/supc.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc0.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc1.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc2.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc3.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc4.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc5.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc6.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tc7.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tcc0.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tcc1.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tcc2.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tcc3.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/tcc4.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/trng.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/usb.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/wdt.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAME54P20A_DFP/pio/same54p20a.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/packs/ATSAME54P20A_DFP/atsame54p20a.h</itemPath>
+          <itemPath>../src/packs/ATSAME54P20A_DFP/same54p20a.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
           <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
@@ -280,6 +343,7 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sha512.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/wc_port.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/certs_test.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/rc2.h</itemPath>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
@@ -399,6 +463,10 @@
         <itemPath>../src/cryptoST/cryptoSTE_utility.c</itemPath>
         <itemPath>../src/cryptoST/cryptoSTE_utility.h</itemPath>
         <itemPath>../src/cryptoST/cryptoST_execute.h</itemPath>
+        <itemPath>../src/cryptoST/cryptoSTE_aes_ofb.c</itemPath>
+        <itemPath>../src/cryptoST/cryptoSTE_aes_ofb.h</itemPath>
+        <itemPath>../src/cryptoST/cryptoSTE_aes_xts.c</itemPath>
+        <itemPath>../src/cryptoST/cryptoSTE_aes_xts.h</itemPath>
       </logicalFolder>
       <logicalFolder name="test_data" displayName="test_data" projectFiles="true">
         <itemPath>../test_data/cryptoSTD_aesavs.c</itemPath>
@@ -438,6 +506,12 @@
         <itemPath>../test_data/cryptoSTD_wolfSSL_aes_ctr.h</itemPath>
         <itemPath>../test_data/cryptoSTD_wolfSSL_aes_gcm.h</itemPath>
         <itemPath>../test_data/cryptoSTD_zero_aes.h</itemPath>
+        <itemPath>../test_data/cryptoSTD_all_msgSize.c</itemPath>
+        <itemPath>../test_data/cryptoSTD_all_msgSize.h</itemPath>
+        <itemPath>../test_data/cryptoSTD_wolfSSL_aes_ofb.c</itemPath>
+        <itemPath>../test_data/cryptoSTD_wolfSSL_aes_ofb.h</itemPath>
+        <itemPath>../test_data/cryptoSTD_wolfSSL_aes_xts.c</itemPath>
+        <itemPath>../test_data/cryptoSTD_wolfSSL_aes_xts.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="wolfcrypt" projectFiles="true">
         <logicalFolder name="f1" displayName="port" projectFiles="true">
@@ -532,6 +606,7 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sha.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sha256.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sha512.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/rc2.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
@@ -539,6 +614,26 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
+      <logicalFolder name="f2"
+                     displayName="sam_e54_xplained_pro_hwsw.mhc"
+                     projectFiles="true">
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/BSP_SAM_E54_Xplained_Pro.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/cmsis.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/core.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/evsys.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/lib_crypto.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/lib_wolfcrypt.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/nvmctrl.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/project.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/sercom2.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/stdio.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/sys_time.yml</itemPath>
+        <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.mhc/tc0.yml</itemPath>
+      </logicalFolder>
       <logicalFolder name="f1" displayName="wolfcrypt" projectFiles="true">
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/misc.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/evp.c</itemPath>
@@ -546,8 +641,6 @@
       <itemPath>Makefile</itemPath>
       <itemPath>dist/sam_e54_xplained_pro_hwsw/debug/sam_e54_xplained_pro_hwsw.X.debug.elf</itemPath>
       <itemPath>dist/sam_e54_xplained_pro_hwsw/debug/sam_e54_xplained_pro_hwsw.X.debug.map</itemPath>
-      <itemPath>../src/config/sam_e54_xplained_pro_hwsw/harmony.prj</itemPath>
-      <itemPath>../src/config/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw.xml</itemPath>
       <itemPath>../src/config/sam_e54_xplained_pro_hwsw/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
@@ -555,6 +648,7 @@
     <Elem>../src</Elem>
     <Elem>.</Elem>
     <Elem>D:/D_git/mh3/crypto/apps/speed_tests/firmware/test_data</Elem>
+    <Elem>../test_data</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -566,12 +660,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.41</languageToolchainVersion>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAME54_DFP" vendor="Microchip" version="3.2.56"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="SAME54_DFP" vendor="Microchip" version="3.6.88"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -592,6 +686,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>true</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep>touch ../src/cryptoST/cryptoST_buildInfo.c</makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -632,7 +727,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/third_party/wolfssl/wolfssl;../src/third_party/wolfssl;../src;../src/config/sam_e54_xplained_pro_hwsw;../src/packs/ATSAME54P20A_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/sam_e54_xplained_pro_hwsw;../src/packs/ATSAME54P20A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -642,7 +737,7 @@
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
-                  value="WOLFSSL_IGNORE_FILE_WARN;HAVE_CONFIG_H"/>
+                  value="HAVE_CONFIG_H;WOLFSSL_IGNORE_FILE_WARN"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="toplevel-reordering" value=""/>
@@ -729,7 +824,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_e54_xplained_pro_hwsw;../src/packs/ATSAME54P20A_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/sam_e54_xplained_pro_hwsw;../src/packs/ATSAME54P20A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -762,6 +857,8 @@
       </C32Global>
       <EdbgTool>
         <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="arm.use_vtor" value="false"/>
+        <property key="arm.vtor_adr" value="exception_table"/>
         <property key="communication.activationmode" value="nohv"/>
         <property key="communication.interface" value="swd"/>
         <property key="communication.speed" value="2.000"/>
@@ -771,6 +868,8 @@
         <property key="firmware.toolpack"
                   value="Press to select which tool pack to use"/>
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
+        <property key="freeze.timers" value="false"/>
+        <property key="lastid" value=""/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
@@ -784,7 +883,10 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-fffff"/>
+        <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Git/crypto_apps_speed_test/apps/speed_tests/firmware/sam_e54_xplained_pro_hwsw.X/debug/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
@@ -795,6 +897,10 @@
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
+        <property key="script.has_reset" value="true"/>
+        <property key="script.log_level" value="1"/>
+        <property key="script.reset_delay" value="0"/>
+        <property key="script.show_output" value="false"/>
         <property key="toolpack.updateoptions"
                   value="toolpack.updateoptions.uselatestoolpack"/>
         <property key="toolpack.updateoptions.packversion"

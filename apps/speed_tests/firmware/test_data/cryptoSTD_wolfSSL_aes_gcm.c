@@ -136,7 +136,11 @@ static ALIGN4 const uint8_t appAAD[] = { // app.c 1285
  * Raw (input) data definitions for run-time defined
  * sequential and random data sets having large block sizes.
  *************************************************************/
-#define SIZE4K     (2944)  // 0xB80
+#if defined(WOLFSSL_MICROCHIP_PIC32MZ)
+    #define SIZE4K     (512)
+#else
+    #define SIZE4K     (2944)  // 0xB80
+#endif
 #define SIZE_PREALLOCATE    SIZE4K  // must be the largest
 static cryptoST_testVector_t seq4k =
 {

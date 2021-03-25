@@ -118,10 +118,13 @@ extern "C" {
 #define WOLF_CRYPTO_CB  // provide call-back support
 #define WOLFCRYPT_ONLY
 #define WOLFSSL_HAVE_MCHP_HW_CRYPTO
+// ---------- CRYPTO HARDWARE MANIFEST START ----------
 #define WOLFSSL_HAVE_MCHP_HW_CRYPTO_AES_HW_U2803
 #define WOLFSSL_HAVE_MCHP_HW_CRYPTO_HW_U2803
 #define WOLFSSL_HAVE_MCHP_HW_CRYPTO_TRNG_HW_U2242
 #define WOLFSSL_HAVE_MCHP_HW_CRYPTO_SHA_HW_U2803
+// ---------- CRYPTO HARDWARE MANIFEST END ----------
+// ---------- FUNCTIONAL CONFIGURATION START ----------
 #define NO_MD4
 #define NO_MD5
 #define NO_SHA // specifically, no SHA1 (legacy name)
@@ -134,12 +137,13 @@ extern "C" {
 #define WOLFSSL_DES_ECB
 #define WOLFSSL_AES_128
 #define AES_MAX_KEY_SIZE 128 // limited CRYA in SAML11
-#define NO_AES_192
-#define NO_AES_256
+#define NO_AES_192 // not supported by HW accelerator
+#define NO_AES_256 // not supported by HW accelerator
 #define WOLFSSL_AES_DIRECT
 #define HAVE_AES_DECRYPT
 #define WOLFSSL_HAVE_MCHP_HW_AES_DIRECT
-#define NO_AES_CBC
+#define HAVE_AES_ECB
+#define HAVE_AES_CBC
 #define NO_RC4
 #define NO_HC128
 #define NO_RABBIT
@@ -155,6 +159,7 @@ extern "C" {
 #define NO_SIG_WRAPPER
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
+// ---------- FUNCTIONAL CONFIGURATION END ----------
 
 
 

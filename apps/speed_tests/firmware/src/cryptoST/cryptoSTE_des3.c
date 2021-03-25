@@ -179,6 +179,7 @@ static const char * cryptoSTE_des3des_all_timed
 
         int ret;
         Des3 enc;
+        
         assert_dbug(24 == td->io.sym.in.key.length);
         ret = wc_Des3_SetKey(&enc, td->io.sym.in.key.data, 
                                    td->io.sym.in.ivNonce.data, DES_ENCRYPTION);
@@ -195,7 +196,8 @@ static const char * cryptoSTE_des3des_all_timed
         {
             /* Note: if vector.length is not a multiple of 16,
              *       the default encryptor will ignore the remnant. */
-            (test->encrypt)(&enc, cipher, vector->vector.data, vector->vector.length);
+                (test->encrypt)(&enc, cipher, vector->vector.data, 
+                                              vector->vector.length);
         }
         param->results.encryption.stop = SYS_TIME_CounterGet();
         if (param->results.errorMessage) break; // out of the test routine

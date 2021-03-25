@@ -56,5 +56,9 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  * Obligatory entry points for executing a test
  *************************************************************/
 extern cryptoST_testAPI_t const CAVS16p1_RSASP1;
+extern const cryptoST_testVector_t RSASP1_256_2048_7099;
+extern const cryptoST_testData_t cavs16p1_2048n;
+extern const cryptoST_testData_t cavs16p1_2048d;
+extern const cryptoST_testData_t cavs16p1_2048ct;
 
 #endif // CRYPTOSTV_RSA_CAVS16p1_RSASP1

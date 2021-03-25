@@ -66,6 +66,7 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 #include "../test_data/cryptoSTD_sha_nist.h"
 #include "../test_data/cryptoSTD_sha_bigBlock.h"
 #endif
+#include "../test_data/cryptoSTD_all_msgSize.h"
 #if defined(HAVE_AES_ECB)
 #include "../test_data/cryptoSTD_aesavs.h"
 #include "../test_data/cryptoSTD_aes_ecb.h"
@@ -84,6 +85,12 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 #endif
 #if defined(HAVE_AESCCM)
 #include "../test_data/cryptoSTD_wolfSSL_aes_ctr.h"
+#endif
+#if defined(WOLFSSL_AES_XTS)
+#include "../test_data/cryptoSTD_wolfSSL_aes_xts.h"
+#endif
+#if defined(WOLFSSL_AES_OFB)
+#include "../test_data/cryptoSTD_wolfSSL_aes_ofb.h"
 #endif
 #if defined(WOLFSSL_AES_CFB)
 #include "../test_data/cryptoSTD_wolfSSL_aes_cfb.h"
@@ -125,13 +132,24 @@ void cryptoSTE_init(cryptoSTE_localData_t * testInformation)
     // Set up a fresh execution -- copy the included API's.
     // Each line here is representative of a #include above,
     // and this list determines test order.
-
+#ifdef CRYPTOSTV_AES_ECB_H
+    ST_list[numberOfLoadedAPI++] = microchip_aes_ecb;
+    __conditional_software_breakpoint(numberOfLoadedAPI <= API_MAX);
+#endif
 #ifdef CRYPTOSTV_ZERO_AES
     ST_list[numberOfLoadedAPI++] = microchip_zero_aes;
     __conditional_software_breakpoint(numberOfLoadedAPI <= API_MAX);
 #endif
 #ifdef CRYPTOSTV_WOLFSSL_AES_CFB
     ST_list[numberOfLoadedAPI++] = wolfSSL_aes_cfb;
+    __conditional_software_breakpoint(numberOfLoadedAPI <= API_MAX);
+#endif
+#ifdef CRYPTOSTV_WOLFSSL_AES_XTS
+    ST_list[numberOfLoadedAPI++] = wolfSSL_aes_xts;
+    __conditional_software_breakpoint(numberOfLoadedAPI <= API_MAX);
+#endif
+#ifdef CRYPTOSTV_WOLFSSL_AES_OFB
+    ST_list[numberOfLoadedAPI++] = wolfSSL_aes_ofb;
     __conditional_software_breakpoint(numberOfLoadedAPI <= API_MAX);
 #endif
 #ifdef CRYPTOSTV_WOLFSSL_AES_CBC
@@ -162,12 +180,12 @@ void cryptoSTE_init(cryptoSTE_localData_t * testInformation)
     ST_list[numberOfLoadedAPI++] = microchip_sha_bigBlock;
     __conditional_software_breakpoint(numberOfLoadedAPI <= API_MAX);
 #endif
-#ifdef CRYPTOSTD_AESAVS_H
-    ST_list[numberOfLoadedAPI++] = aesavs_aes128;
+#if defined(CRYPTOSTV_ALL_MSGSIZE)
+    ST_list[numberOfLoadedAPI++] = microchip_all_msgSize;
     __conditional_software_breakpoint(numberOfLoadedAPI <= API_MAX);
 #endif
-#ifdef CRYPTOSTV_AES_ECB_H
-    ST_list[numberOfLoadedAPI++] = microchip_aes_ecb;
+#ifdef CRYPTOSTD_AESAVS_H
+    ST_list[numberOfLoadedAPI++] = aesavs_aes128;
     __conditional_software_breakpoint(numberOfLoadedAPI <= API_MAX);
 #endif
 #ifdef CRYPTOSTV_DES3

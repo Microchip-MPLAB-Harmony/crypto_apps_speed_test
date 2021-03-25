@@ -80,6 +80,7 @@ typedef enum EncryptTechnique_e
     ET_AES_128,
     ET_AES_192,
     ET_AES_256,
+    //ET_AES_XTS,
     ET_AES_GCM,     /* hash -- use EM_NONE */
     ET_AES_CCM,     /* hash -- use EM_NONE */
     ET_AES_GMAC,    /* hash -- use EM_NONE */
@@ -90,12 +91,16 @@ typedef enum EncryptTechnique_e
     ET_MD4,
     ET_MD5,
     ET_MD6,
-    ET_SHA_128,     /* a.k.a. SHA or SHA1 */
+    ET_SHA_1  ,     /* a.k.a. SHA or SHA1 */
     ET_SHA_224,
     ET_SHA_256,
     ET_SHA_384,
     ET_SHA_512,
-
+    ET_SHA3_224,
+    ET_SHA3_256,        
+    ET_SHA3_384,
+    ET_SHA3_512,
+            
     ET_PK_RSA_SIGN,
     ET_PK_RSA_VERIFY,
     ET_PK_RSA_EXPTMOD,
@@ -152,7 +157,10 @@ typedef enum EncryptMode_e
     EM_CFB,  // AES, deprecated for DES
     EM_OFB,  // AES, deprecated for DES
     EM_CTR,  // AES
-
+    //EM_GCM,  // AES
+    EM_XTS,  // AES
+    EM_CMAC, // AES
+            
     EM_ECC_P192,
     EM_ECC_P224,
     EM_ECC_P256,

@@ -1,0 +1,271 @@
+/* cryptoSTV_wolfSSL_aes_ofb.c
+
+  Crypto Speed Test Data File
+
+  Company:
+    Microchip Technology Inc.
+
+  Description:
+   This package transliterates test data from the wolfSSL test.c file,
+   specifically the data for the AES/OFB tests.
+*/
+
+//DOM-IGNORE-BEGIN
+/*****************************************************************************
+ Copyright (C) 2013-2020 Microchip Technology Inc. and its subsidiaries.
+
+Microchip Technology Inc. and its subsidiaries.
+
+Subject to your compliance with these terms, you may use Microchip software 
+and any derivatives exclusively with Microchip products. It is your 
+responsibility to comply with third party license terms applicable to your 
+use of third party software (including open source software) that may 
+accompany Microchip software.
+
+THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
+EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED 
+WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR 
+PURPOSE.
+
+IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
+INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
+WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS 
+BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE 
+FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN 
+ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY, 
+THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+*****************************************************************************/
+
+//DOM-IGNORE-END
+
+#include <stddef.h>
+#include <stdint.h>
+#include "./cryptoSpeedTestData.h"
+#include "cryptoST/cryptoSTE_print.h" // for BASE_LINE
+#ifdef HAVE_CONFIG_H
+    #include <config.h>
+#endif
+
+#define CONST /* as nothing */
+#define ALIGN4 __attribute__((aligned(4)))
+
+#if defined(WOLFSSL_AES_128)
+static const cryptoST_testVector_t test_vector =
+{
+    .name = "AES_OFB128",
+    .source = "NIST OFBMMT128.rsp COUNT = 3",
+    // .description =  NULL,
+    .vector.data = (ALIGN4 const uint8_t[]){
+        0xe3, 0xdb, 0xfc, 0x6a, 0xe1, 0xa8, 0x79, 0x87, 
+        0x0f, 0xd2, 0x26, 0x44, 0xc8, 0x13, 0x5f, 0xe0, 
+        0x63, 0x35, 0x5d, 0xfc, 0x0a, 0x8d, 0xad, 0x45, 
+        0xc9, 0xc6, 0xe0, 0x52, 0xe6, 0xe0, 0x85, 0xcf, 
+        0x71, 0x77, 0x54, 0xdc, 0x1b, 0x49, 0xac, 0xb0, 
+        0x4c, 0xf3, 0x40, 0x82, 0x6f, 0xfb, 0x0d, 0xa9, 
+        0x91, 0x13, 0x8f, 0x02, 0x2a, 0x9c, 0x34, 0x92, 
+        0x3a, 0x6a, 0x11, 0x6c, 0x98, 0xc7, 0xd3, 0xd5
+    },
+    .vector.length = 64,
+};
+#endif
+
+#if defined(WOLFSSL_AES_192)
+static const cryptoST_testVector_t test_vector192 =
+{
+    .name = "AES_OFB192",
+    .source = "NIST OFBMMT192.rsp COUNT = 3",
+    // .description =  NULL,
+    .vector.data = (ALIGN4 const uint8_t[]){
+        0x2f, 0x21, 0x78, 0xa2, 0x85, 0xe6, 0x19, 0x32, 
+        0xc0, 0xb7, 0x5d, 0x7b, 0xe0, 0xa6, 0xe2, 0x3a, 
+        0xfe, 0x78, 0x24, 0x83, 0x30, 0xfc, 0x8b, 0xb3, 
+        0xad, 0x9c, 0xa9, 0xa7, 0x32, 0x32, 0xbc, 0x2b, 
+        0xa4, 0x1d, 0x7b, 0xb5, 0xf6, 0x93, 0x0f, 0x54, 
+        0x4d, 0x38, 0x5f, 0xe3, 0x62, 0xf0, 0x90, 0x82, 
+        0x28, 0xf2, 0xcc, 0x47, 0xb0, 0x1f, 0x43, 0x30, 
+        0x49, 0x91, 0x70, 0x5c, 0xeb, 0x76, 0x9e, 0x7b
+    },
+    .vector.length = 64,
+};
+#endif
+
+#if defined(WOLFSSL_AES_256)
+static const cryptoST_testVector_t test_vector256 =
+{
+    .name = "AES_OFB256",
+    .source = "NIST OFBMMT256.rsp COUNT = 3",
+    // .description =  NULL,
+    .vector.data = (ALIGN4 const uint8_t[]){
+        0xcb, 0x9a, 0xc8, 0x9b, 0x78, 0x90, 0x2c, 0xe0, 
+        0x9d, 0x84, 0x67, 0x29, 0x11, 0x81, 0xa7, 0x02, 
+        0xfd, 0x9a, 0x04, 0x30, 0xe2, 0xdc, 0xa9, 0x44, 
+        0xde, 0x81, 0x35, 0x70, 0x2b, 0x66, 0x61, 0x9a, 
+        0xe8, 0xc0, 0xe2, 0xaf, 0x1c, 0x0a, 0x91, 0x3a, 
+        0xf8, 0x42, 0xc9, 0x35, 0x5c, 0x54, 0x10, 0x1e, 
+        0x9d, 0xd7, 0xfa, 0x4e, 0x86, 0xf7, 0x4b, 0x87, 
+        0x9c, 0xb2, 0x5c, 0xcc, 0xa6, 0x48, 0xc0, 0x75
+    },
+    .vector.length = 64,
+};
+
+#endif
+static const cryptoST_testDetail_t test_item[] =
+{
+    // Keys and results for AES OFB 128, 192, 256
+#if defined(WOLFSSL_AES_128)
+    {
+        .technique = ET_AES_128,
+        .mode = EM_OFB,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = "NIST OFBMMT128.rsp COUNT = 3",
+        .rawData = &test_vector,//128
+        .io.sym.out.cipher = {
+            .length = 64,
+            .data = (ALIGN4 const uint8_t[]){
+                0x48, 0xa3, 0x4b, 0xd8, 0x14, 0xdd, 0x4e, 0x1b, 
+                0x92, 0xa5, 0xaa, 0x04, 0x21, 0x81, 0x36, 0xbc, 
+                0xd4, 0x28, 0xfd, 0x34, 0xca, 0x15, 0x1a, 0x78, 
+                0xe0, 0xeb, 0x2c, 0x8f, 0x24, 0xd4, 0xf0, 0x70, 
+                0x97, 0x8a, 0xac, 0xd5, 0xe1, 0x35, 0x1c, 0x90, 
+                0x9c, 0x81, 0x8d, 0xb4, 0x5d, 0x25, 0xb3, 0x4f, 
+                0xc2, 0x1c, 0xb0, 0x6a, 0x39, 0x84, 0xf9, 0x69, 
+                0xab, 0x82, 0x5e, 0xf7, 0x95, 0x88, 0x8d, 0xa9
+            }
+        },
+        .io.sym.in.key = {
+            .length = AES128_KEY_SIZE/8,
+            .data = (ALIGN4 const uint8_t[]){
+                0x85, 0xdb, 0xd5, 0xa6, 0xe7, 0x36, 0x81, 0xa5, 
+                0x1a, 0x4a, 0x7d, 0x4e, 0x93, 0xca, 0x7d, 0x0c
+            }
+        },
+        .io.sym.in.ivNonce = {
+            .length = 16,
+            .data = (ALIGN4 const uint8_t[]){
+                0x89, 0xd8, 0x97, 0xc5, 0xaa, 0x9e, 0x0a, 0x5d, 
+                0x55, 0x86, 0xd4, 0xb4, 0x66, 0x4f, 0xc9, 0x27
+            }
+        },
+    },
+#endif
+#if defined(WOLFSSL_AES_192)
+    {
+        .technique = ET_AES_192,
+        .mode = EM_OFB,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = "NIST OFBMMT192.rsp COUNT = 3",
+        .rawData = &test_vector192,
+        .io.sym.out.cipher = {
+            .length = 64,
+            .data = (ALIGN4 const uint8_t[]){
+                0x86, 0x3a, 0xa2, 0x35, 0xc8, 0xec, 0x3d, 0x7e, 
+                0x8b, 0x24, 0x24, 0x4f, 0x9e, 0xb7, 0x97, 0xa6, 
+                0x10, 0xd0, 0x81, 0x4c, 0xf1, 0x5b, 0x2b, 0xdc, 
+                0x2b, 0x17, 0xe9, 0x0e, 0x02, 0xe1, 0x5e, 0x2b, 
+                0x4b, 0x73, 0xaf, 0xfc, 0x0d, 0x59, 0x83, 0xaa, 
+                0x9e, 0x9b, 0x63, 0xfc, 0x50, 0x04, 0x62, 0x9b, 
+                0x1e, 0x33, 0x71, 0x29, 0xcd, 0x3e, 0x4f, 0x3c, 
+                0xc4, 0x8b, 0x7f, 0x17, 0x45, 0x44, 0xe3, 0x0e
+            }
+        },
+        .io.sym.in.key = {
+            .length = AES192_KEY_SIZE/8,
+            .data = (ALIGN4 const uint8_t[]){ 
+                0x66, 0xc7, 0xd3, 0x13, 0x59, 0xea, 0xc0, 0x90, 
+                0x56, 0xd5, 0x97, 0x81, 0x65, 0x42, 0xbf, 0xfe, 
+                0x4b, 0xb3, 0x3e, 0x47, 0x5d, 0xfb, 0x2d, 0x62 
+                }
+            },
+        .io.sym.in.ivNonce = {
+            .length = 16,
+            .data = (ALIGN4 const uint8_t[]){
+                0x42, 0x60, 0x42, 0xdc, 0x81, 0xa7, 0xa0, 0x69, 
+                0x25, 0x19, 0x72, 0xb9, 0x1f, 0xb3, 0x50, 0x58
+            },
+        }
+    },
+#endif
+#if defined(WOLFSSL_AES_256)
+    {
+        .technique = ET_AES_256,
+        .mode = EM_OFB,
+        .recommendedRepetitions = 1000,
+
+        .source = __BASE_FILE__ "(" BASE_LINE ")",
+        .pedigree = "NIST OFBMMT256.rsp COUNT = 3",
+        .rawData = &test_vector256,
+        .io.sym.out.cipher = {
+            .length = 64,
+            .data = (ALIGN4 const uint8_t[]){
+            0x5d, 0xf0, 0x3b, 0x8d, 0x91, 0xcb, 0x0e, 0x5d, 
+            0xa8, 0x6b, 0xa1, 0x08, 0xea, 0xd8, 0x7e, 0xc7, 
+            0x62, 0xc9, 0x07, 0x67, 0xac, 0xe9, 0x6b, 0xe6, 
+            0x05, 0x98, 0xb4, 0xef, 0xe8, 0xf3, 0xd3, 0xf8, 
+            0x38, 0x38, 0x27, 0xa5, 0x99, 0x18, 0x0f, 0xfd, 
+            0xdd, 0xb3, 0xe9, 0x41, 0x51, 0xe2, 0x2f, 0xee, 
+            0xda, 0x3c, 0x90, 0x65, 0x1a, 0x69, 0x7f, 0x38, 
+            0x34, 0xe0, 0x36, 0xe4, 0x4d, 0x05, 0x06, 0xb2
+            }
+        },
+        .io.sym.in.key = {
+            .length = AES256_KEY_SIZE/8,
+            .data = (ALIGN4 const uint8_t[]){
+                0x7c, 0x44, 0x24, 0xcf, 0x1a, 0xc4, 0xd7, 0x5a, 
+                0xce, 0xeb, 0xdb, 0x22, 0x38, 0xa9, 0xf0, 0x38, 
+                0x34, 0x38, 0xf4, 0x53, 0xaf, 0xa5, 0x57, 0x72, 
+                0xb9, 0x8c, 0xcf, 0xc3, 0xdc, 0x23, 0x4d, 0xc4
+            },
+        },
+        .io.sym.in.ivNonce = {
+            .length = 16,
+            .data = (ALIGN4 const uint8_t[]){
+                0x34, 0x83, 0x82, 0x73, 0xc7, 0x84, 0x8b, 0x70, 
+                0xc6, 0xe1, 0xab, 0xad, 0x79, 0xce, 0x13, 0x25
+            },
+        }
+    },
+#endif
+    {}
+};
+#define test_item_count (sizeof(test_item)/sizeof(cryptoST_testDetail_t))
+
+/*************************************************************
+ * API handlers
+ *************************************************************/
+static const cryptoST_testDetail_t * firstTest(void)
+{
+    return test_item;
+}
+static const cryptoST_testDetail_t * nextTest(const cryptoST_testDetail_t * old)
+{
+    // Assume that if its in range, that it is legitimate.
+    if (old < test_item) 
+        return NULL;
+    old++; // repurpose: this is now "new"
+    
+    // We know that the final (illegitimate) entry has a null name,
+    // but we still need to check if "old" is _way_ out of bounds.
+    if ((old >= &test_item[test_item_count])
+            || (ET_NONE == old->technique))
+        return NULL;
+    return old;
+}
+
+/*************************************************************
+ * Declaration of the test manager API
+ * Obligatory entry points for executing a test
+ *************************************************************/
+#include "cryptoSTD_wolfSSL_aes_ofb.h"
+cryptoST_testAPI_t const wolfSSL_aes_ofb =
+{
+    .name = "AES_OFB",
+    .openData = NULL,
+    .firstTest = firstTest,
+    .nextTest = nextTest,
+    .closeData = NULL,
+};
+

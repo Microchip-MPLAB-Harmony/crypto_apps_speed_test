@@ -102,7 +102,7 @@ static const char * cryptoSTE_sha(const cryptoST_testDetail_t * td,
     }
             
     param->results.encryption.size = vector->vector.length;
-    
+
     // Hold off until the serial port is finished
     PRINT_WAIT_WHILE_BUSY();
 
@@ -111,10 +111,10 @@ static const char * cryptoSTE_sha(const cryptoST_testDetail_t * td,
                                   : td->recommendedRepetitions;
 
     assert_dbug(0 < td->io.hash.out.hash.length);
-    uint32_t hash[td->io.hash.out.hash.length]; // room for expected size
+    uint32_t hash[td->io.hash.out.hash.length];// room for expected size
     do
     {
-        param->results.encryption.start = SYS_TIME_CounterGet();
+        param->results.encryption.start = SYS_TIME_CounterGet();        
         for (int i = param->results.encryption.iterations; i > 0; i--)
         {
             int ret = hash_operator(hash,
@@ -133,7 +133,7 @@ static const char * cryptoSTE_sha(const cryptoST_testDetail_t * td,
 
         if (param->parameters.verifyByGoldenCiphertext)
         {
-            if (td->io.hash.out.hash.length == 0)
+            if(td->io.hash.out.hash.data == NULL)
                 param->results.warningCount++,
                 param->results.warningMessage = "can't verify cipher: no golden data"; 
             else if (XMEMCMP(hash, td->io.hash.out.hash.data, td->io.hash.out.hash.length))
@@ -142,7 +142,7 @@ static const char * cryptoSTE_sha(const cryptoST_testDetail_t * td,
                 if (CSTE_VERBOSE)
                 {
                     cryptoST_PRINT_hexLine(CRLF "..cipher:", 
-                            (uint8_t*)hash, sizeof(hash));
+                            (uint8_t*)hash, sizeof(hash)/4);//over four: hash is an int array with an int for every byte in the result
                     cryptoST_PRINT_hexLine(CRLF "..golden:",
                             td->io.hash.out.hash.data, td->io.hash.out.hash.length);
                     PRINT_WAIT(CRLF);
@@ -164,8 +164,8 @@ static const char * cryptoSTE_sha(const cryptoST_testDetail_t * td,
  */
 #if !defined(NO_SHA) // SHA1
 #include "wolfssl/wolfcrypt/hash.h"
-static int WC_sha128
-    (uint32_t hash[128/32], const uint8_t * data, const size_t length)
+static int WC_sha1
+    (uint32_t hash[160/32], const uint8_t * data, const size_t length)
 {
     return wc_ShaHash(data, length, (uint8_t*)hash);
 }
@@ -208,6 +208,41 @@ static int WC_sha512
 }
 #endif // !NO_SHA512
 
+#if defined(WOLFSSL_SHA3_224)
+#include "wolfssl/wolfcrypt/sha3.h"
+static int WC_sha3_224
+    (uint32_t hash[256/32], const uint8_t * data, const size_t length)
+{
+    return wc_Sha3_224Hash(data, length, (uint8_t*)hash);
+}
+#endif // !NO_SHA3_224
+
+#if defined(WOLFSSL_SHA3_256)
+#include "wolfssl/wolfcrypt/sha3.h"
+static int WC_sha3_256
+    (uint32_t hash[256/32], const uint8_t * data, const size_t length)
+{
+    return wc_Sha3_256Hash(data, length, (uint8_t*)hash);
+}
+#endif // !NO_SHA3_256
+
+#if defined(WOLFSSL_SHA3_384)
+#include "wolfssl/wolfcrypt/sha3.h"
+static int WC_sha3_384
+    (uint32_t hash[512/32], const uint8_t * data, const size_t length)
+{
+    return wc_Sha3_384Hash(data, length, (uint8_t*)hash);
+}
+#endif // !NO_SHA3_384
+
+#if defined(WOLFSSL_SHA3_512)
+#include "wolfssl/wolfcrypt/sha3.h"
+static int WC_sha3_512
+    (uint32_t hash[512/32], const uint8_t * data, const size_t length)
+{
+    return wc_Sha3_512Hash(data, length, (uint8_t*)hash);
+}
+#endif // !NO_SHA3_512
 // *****************************************************************************
 // *****************************************************************************
 // Section: External API
@@ -259,9 +294,9 @@ const char * cryptoSTE_crya_sha_timed(const cryptoST_testDetail_t * td,
         switch(td->technique)
         {
 #if !defined(NO_SHA) // SHA1
-            case ET_SHA_128:
-                param->results.testHandler = "WOLF SHA 128";
-                return cryptoSTE_sha(td, param, WC_sha128);
+            case ET_SHA_1  :
+                param->results.testHandler = "WOLF SHA 1  ";
+                return cryptoSTE_sha(td, param, WC_sha1);
 #endif //WOLFSSL_SHA1
 #if !defined(NO_SHA256)
 #if defined(WOLFSSL_SHA224)
@@ -282,7 +317,27 @@ const char * cryptoSTE_crya_sha_timed(const cryptoST_testDetail_t * td,
             case ET_SHA_512:
                 param->results.testHandler = "WOLF SHA 512";
                 return cryptoSTE_sha(td, param, WC_sha512);
-#endif //WOLFSSL_SHA256
+#endif //WOLFSSL_SHA512
+#if defined(WOLFSSL_SHA3_224)
+            case ET_SHA3_224:
+                param->results.testHandler = "WOLF SHA3 224";
+                return cryptoSTE_sha(td, param, WC_sha3_224);
+#endif //WOLFSSL_SHA3_224
+#if defined(WOLFSSL_SHA3_256)
+            case ET_SHA3_256:
+                param->results.testHandler = "WOLF SHA3 256";
+                return cryptoSTE_sha(td, param, WC_sha3_256);
+#endif //WOLFSSL_SHA3_256
+#if defined(WOLFSSL_SHA3_384)
+            case ET_SHA3_384:
+                param->results.testHandler = "WOLF SHA3 384";
+                return cryptoSTE_sha(td, param, WC_sha3_384);
+#endif //WOLFSSL_SHA3_384
+#if defined(WOLFSSL_SHA3_512)
+            case ET_SHA3_512:
+                param->results.testHandler = "WOLF SHA3 512";
+                return cryptoSTE_sha(td, param, WC_sha3_512);
+#endif //WOLFSSL_SHA3_512
             default:
                 param->results.testHandler = "SHA (default)";
                 return "SHA size not supported";

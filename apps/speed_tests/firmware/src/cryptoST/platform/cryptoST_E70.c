@@ -173,6 +173,7 @@ void cryptoST(void)
     printf("-----END TIMED TESTING-----" CRLF);
 #endif
     
+    
     printf(CRLF "Tests attempted :%u" CRLF, execData.testsAttempted);
     printf(     "Tests successful:%u" CRLF, execData.testsSucceeded);
 }
