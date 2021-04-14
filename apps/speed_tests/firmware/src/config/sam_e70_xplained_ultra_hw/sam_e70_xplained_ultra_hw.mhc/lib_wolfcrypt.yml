@@ -247,7 +247,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: enabled}
+        attributes: {value: disabled}
   - type: Boolean
     attributes: {id: wolfcrypt_sha384}
     children:
@@ -270,4 +270,4 @@ children:
       - type: User
         attributes: {value: 'true'}
 - type: ElementPosition
-  attributes: {x: '26', y: '336', id: lib_wolfcrypt}
+  attributes: {x: '26', y: '335', id: lib_wolfcrypt}

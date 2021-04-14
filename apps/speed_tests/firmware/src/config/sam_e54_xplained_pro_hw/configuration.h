@@ -135,6 +135,7 @@ extern "C" {
 #define WOLFSSL_SHA384
 #define WOLFSSL_SHA512
 #define HAVE_SHA512
+#define NO_HMAC
 #define WOLFSSL_DES_ECB
 #define WOLFSSL_AES_128
 #define WOLFSSL_AES_192
@@ -161,7 +162,7 @@ extern "C" {
 #define NO_DH
 #define NO_DSA
 #define WOLFSSL_HAVE_MCHP_HW_RSA
-#define FP_MAX_BITS 8192
+#define FP_MAX_BITS 4096
 #define USE_CERT_BUFFERS_2048
 #define WC_NO_RSA_OAEP
 #define NO_DEV_RANDOM
@@ -174,11 +175,8 @@ extern "C" {
 #define NO_SIG_WRAPPER
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
-#define WOLFSSL_AES_OFB
-#define WOLFSSL_AES_XTS
-#define NO_HMAC  //there was a build error with hmac; this avoids it
-#define WOLFSSL_DES_ECB
-    
+// ---------- FUNCTIONAL CONFIGURATION END ----------
+
 
 
 // *****************************************************************************

@@ -135,7 +135,6 @@ extern "C" {
 #define HAVE_AES_CBC
 #define WOLFSSL_AES_COUNTER
 #define WOLFSSL_AES_CFB
-#define WOLFSSL_AES_OFB
 #define HAVE_AESGCM
 #define WOLFSSL_AES_XTS
 #define HAVE_AESCCM

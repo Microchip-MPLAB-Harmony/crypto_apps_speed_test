@@ -130,9 +130,6 @@ extern "C" {
 #define NO_SHA // specifically, no SHA1 (legacy name)
 #define WOLFSSL_HAVE_MCHP_HW_SHA264
 #define NO_SHA224
-#define WOLFSSL_SHA384
-#define WOLFSSL_SHA512
-#define HAVE_SHA512
 #define NO_HMAC
 #define WOLFSSL_DES_ECB
 #define WOLFSSL_AES_128
@@ -159,6 +156,7 @@ extern "C" {
 #define NO_SIG_WRAPPER
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
+#define WOLFSSL_AES_SMALL_TABLES
 // ---------- FUNCTIONAL CONFIGURATION END ----------
 
 

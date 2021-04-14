@@ -567,13 +567,13 @@ children:
       - type: String
         attributes: {id: value}
         children:
-        - {type: Value, value: '24500'}
+        - {type: Value, value: '25000'}
   - type: Integer
     attributes: {id: XC32_HEAP_SIZE}
     children:
     - type: Values
       children:
       - type: User
-        attributes: {value: '24500'}
+        attributes: {value: '25000'}
 - type: ElementPosition
   attributes: {x: '312', y: '60', id: core}

@@ -144,7 +144,7 @@ static const char * cryptoSTE_aes_cfb_timed(const cryptoST_testDetail_t * td,
     PRINT_WAIT_WHILE_BUSY();
     
     // Remove any data noise that is in the target buffer
-    XMEMSET(cipher, 0, sizeof(cipher));
+    XMEMSET(cipher, 0, sizeof(vector->vector.length));
     param->results.encryption.iterations = param->parameters.iterationOverride? 
                                 param->parameters.iterationOverride
                                   : td->recommendedRepetitions;

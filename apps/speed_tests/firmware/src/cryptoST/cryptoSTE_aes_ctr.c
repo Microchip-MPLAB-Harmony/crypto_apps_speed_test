@@ -135,7 +135,7 @@ static const char * cryptoSTE_aes_ctr_timed(const cryptoST_testDetail_t * td,
     }
     
     // Remove any data noise that is in the target buffer
-    XMEMSET(cipher, 0, sizeof(cipher));
+    XMEMSET(cipher, 0, sizeof(vector->vector.length));
     param->results.encryption.iterations = param->parameters.iterationOverride? 
                                 param->parameters.iterationOverride
                                   : td->recommendedRepetitions;
@@ -169,7 +169,7 @@ static const char * cryptoSTE_aes_ctr_timed(const cryptoST_testDetail_t * td,
                 cryptoST_PRINT_hexLine(CRLF "given : ",
                         vector->vector.data, vector->vector.length);
                 cryptoST_PRINT_hexLine(CRLF "cipher: ",
-                        cipher, ALENGTH(cipher));
+                        cipher, ALENGTH(sizeof(cipher)));
                 cryptoST_PRINT_hexLine(CRLF "gold  : ",
                         td->io.sym.out.cipher.data, td->io.sym.out.cipher.length);
                 PRINT(CRLF);

@@ -78,7 +78,7 @@ extern "C" {
 //void cryptoST_PRINT_lint(char * pre, long int intVal);
 //void cryptoST_PRINT_luint(char * pre, long unsigned int intVal);
 void cryptoST_PRINT_hexLine
-    (const char * const tag, const uint8_t * const data, const size_t const length);
+    (const char * const tag, const uint8_t * const data, size_t const length);
 void cryptoST_PRINT_hexBlock
     (const char * const tag, const uint8_t * const data, size_t const length);
     

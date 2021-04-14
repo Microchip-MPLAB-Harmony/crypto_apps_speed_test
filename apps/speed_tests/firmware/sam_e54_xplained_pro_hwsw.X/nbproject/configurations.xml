@@ -660,7 +660,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -886,7 +886,7 @@
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="C:/Git/crypto_apps_speed_test/apps/speed_tests/firmware/sam_e54_xplained_pro_hwsw.X/debug/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw_ptg"/>
+                  value="C:/Git/speed_test_bitbucket_14Apr21/crypto_apps_speed_test/apps/speed_tests/firmware/sam_e54_xplained_pro_hwsw.X/debug/sam_e54_xplained_pro_hwsw/sam_e54_xplained_pro_hwsw_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

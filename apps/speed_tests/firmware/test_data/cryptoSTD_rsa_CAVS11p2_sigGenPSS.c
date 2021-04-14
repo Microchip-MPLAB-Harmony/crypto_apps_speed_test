@@ -317,7 +317,7 @@ static const cryptoST_testDetail_t test_item[] =
  *************************************************************/
 /* This handles the case with the empty test_item. */ 
 static const cryptoST_testDetail_t * nextTest
-                (const const cryptoST_testDetail_t * old)
+                (const cryptoST_testDetail_t * old)
 {
     // Assume that if the pointer is in range, that it is legitimate.
     if (old >= test_item) 

@@ -2533,13 +2533,13 @@ files:
   security: NON_SECURE
   type: IMPORTANT
   userChecksum: D0A155C957A5AB326FFCFB27C332B88A
-- generatedChecksum: 4E7F2CB5DB78EEC08F2203D807F6D823
+- generatedChecksum: 90414B5A018294AE2BBEF486235EA6BB
   logicalPath: wolfcrypt
   name: misc.c
   physicalPath: ..\..\third_party\wolfssl\wolfssl\wolfcrypt\src
   security: NON_SECURE
   type: IMPORTANT
-  userChecksum: 4E7F2CB5DB78EEC08F2203D807F6D823
+  userChecksum: 90414B5A018294AE2BBEF486235EA6BB
 format_version: v1.0
 libraries: []
 settings:

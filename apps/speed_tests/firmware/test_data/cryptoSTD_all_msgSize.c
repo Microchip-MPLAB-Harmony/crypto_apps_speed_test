@@ -855,7 +855,7 @@ int modeList[] =
     EM_ECB,
 #if !defined(__SAML11E16A__) // compiler pre-defined
     EM_CFB,
-    EM_OFB, 
+//    EM_OFB, 
     EM_CTR,
 //    EM_GCM,
     EM_XTS,
@@ -1070,7 +1070,7 @@ static const cryptoST_testDetail_t * nextTest(const cryptoST_testDetail_t * old)
     
                     if(
 #if defined(WOLFSSL_DES_ECB)
-                            EM_ECB == modeList[modeIter]) || 
+                            EM_ECB == modeList[modeIter] || 
 #endif
                             EM_CBC == modeList[modeIter])
                     {
@@ -1095,7 +1095,7 @@ static const cryptoST_testDetail_t * nextTest(const cryptoST_testDetail_t * old)
                         ET_SHA3_224 == techniqueList[techniqueIter] ||
                         ET_SHA3_256 == techniqueList[techniqueIter] ||
                         ET_SHA3_384 == techniqueList[techniqueIter] ||
-                        ET_SHA3_512 == techniqueList[techniqueIter]*/
+                        ET_SHA3_512 == techniqueList[techniqueIter]
 #endif                        
                         )
                 {

@@ -124,6 +124,7 @@ extern "C" {
 #define WOLFSSL_SHA384
 #define WOLFSSL_SHA512
 #define HAVE_SHA512
+#define NO_HMAC
 #define WOLFSSL_DES_ECB
 #define WOLFSSL_AES_128
 #define WOLFSSL_AES_192
@@ -136,7 +137,6 @@ extern "C" {
 #define WOLFSSL_AES_CFB
 #define HAVE_AESGCM
 #define WOLFSSL_AES_XTS
-#define WOLFSSL_AES_OFB
 #define HAVE_AESCCM
 #define NO_RC4
 #define NO_HC128

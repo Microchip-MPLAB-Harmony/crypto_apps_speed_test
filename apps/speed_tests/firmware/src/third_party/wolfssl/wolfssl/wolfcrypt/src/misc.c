@@ -320,8 +320,6 @@ WC_STATIC WC_INLINE int ConstantCompare(const byte* a, const byte* b, int length
     {
         return a > b ? b : a;
     }
-#else
-
 #endif /* !WOLFSSL_HAVE_MIN */
 
 #ifndef WOLFSSL_HAVE_MAX

@@ -1322,13 +1322,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 15AB6693CC2E1EE7AB845EE42A6AC762
-- generatedChecksum: 97EAE5DDDF42B4BD0C0319344CF66D83
+- generatedChecksum: 319308C11D6D8E088021F2781E5849C1
   logicalPath: config\sam_e54_xplained_pro_hw
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: CDAE9951E19371D8BE44DAED53541F62
+  userChecksum: 319308C11D6D8E088021F2781E5849C1
 - generatedChecksum: 624A16D50759D7A491C523D747764B49
   logicalPath: packs\CMSIS\CMSIS\Core\Include
   name: core_cm4.h
@@ -2750,13 +2750,13 @@ files:
   security: NON_SECURE
   type: IMPORTANT
   userChecksum: D0A155C957A5AB326FFCFB27C332B88A
-- generatedChecksum: 4E7F2CB5DB78EEC08F2203D807F6D823
+- generatedChecksum: 90414B5A018294AE2BBEF486235EA6BB
   logicalPath: wolfcrypt
   name: misc.c
   physicalPath: ..\..\third_party\wolfssl\wolfssl\wolfcrypt\src
   security: NON_SECURE
   type: IMPORTANT
-  userChecksum: 4E7F2CB5DB78EEC08F2203D807F6D823
+  userChecksum: 90414B5A018294AE2BBEF486235EA6BB
 format_version: v1.0
 libraries: []
 settings:
