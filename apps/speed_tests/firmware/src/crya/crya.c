@@ -54,7 +54,7 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 /* CRYA entry points are located in ROM as defined by the device file.
  */
 #if defined __SAML11E16A__
-#include "crya\crya_saml11.h"
+#include "crya/crya_saml11.h"
 
 #define assert_dbug(X) __conditional_software_breakpoint((X))
 #define ARRAY_SIZE(a)  (sizeof(a)/sizeof(a[0]))
