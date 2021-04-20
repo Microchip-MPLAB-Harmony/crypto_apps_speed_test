@@ -156,7 +156,6 @@ extern "C" {
 #define NO_SIG_WRAPPER
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
-#define WOLFSSL_AES_SMALL_TABLES
 // ---------- FUNCTIONAL CONFIGURATION END ----------
 
 

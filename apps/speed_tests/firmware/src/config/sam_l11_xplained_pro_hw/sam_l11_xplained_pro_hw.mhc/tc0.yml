@@ -133,7 +133,7 @@ children:
       - type: Dynamic
         attributes: {id: tc0, value: 'true'}
       - type: User
-        attributes: {value: 'false'}
+        attributes: {value: 'true'}
   - type: Boolean
     attributes: {id: TC_TIMER_INTENSET_OVF}
     children:
@@ -144,6 +144,12 @@ children:
   - type: Long
     attributes: {id: TC_TIMER_PERIOD}
     children:
+    - type: Attributes
+      children:
+      - type: Long
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '4294967295'}
     - type: Values
       children:
       - type: Dynamic

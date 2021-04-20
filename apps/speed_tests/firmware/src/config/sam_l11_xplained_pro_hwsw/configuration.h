@@ -129,8 +129,7 @@ extern "C" {
 #define NO_AES_256 // not supported by HW accelerator
 #define WOLFSSL_AES_DIRECT
 #define HAVE_AES_DECRYPT
-#define HAVE_AES_ECB
-#define HAVE_AES_CBC
+#define NO_AES_CBC
 #define NO_RC4
 #define NO_HC128
 #define NO_RABBIT
@@ -146,7 +145,6 @@ extern "C" {
 #define NO_SIG_WRAPPER
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
-#define WOLFSSL_AES_SMALL_TABLES
 // ---------- FUNCTIONAL CONFIGURATION END ----------
 
 

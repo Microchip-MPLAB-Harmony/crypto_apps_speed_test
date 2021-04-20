@@ -52,11 +52,11 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
 #include <stdio.h>
 #include <assert.h>
 #include "app.h"
 #include "cryptoST/cryptoST.h"
+
 
 // #define INVOKE_INITIALIZATION_DELAY
 

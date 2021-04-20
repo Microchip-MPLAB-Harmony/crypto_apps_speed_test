@@ -106,7 +106,9 @@ void TC0_Timer32bitCounterSet( uint32_t count );
 
 void TC0_Timer32bitCompareSet( uint32_t compare );
 
-bool TC0_TimerPeriodHasExpired( void );
+
+void TC0_TimerCallbackRegister( TC_TIMER_CALLBACK callback, uintptr_t context );
+
 
 void TC0_TimerCommandSet(TC_COMMAND command);
 

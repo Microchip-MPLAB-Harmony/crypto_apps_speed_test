@@ -26,8 +26,21 @@ children:
       - type: Dynamic
         attributes: {id: lib_wolfcrypt, value: 'false'}
   - type: Boolean
+    attributes: {id: wolfcrypt_aes}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: Boolean
     attributes: {id: wolfcrypt_aes_128}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: User
@@ -35,6 +48,12 @@ children:
   - type: Boolean
     attributes: {id: wolfcrypt_aes_192}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: User
@@ -42,6 +61,12 @@ children:
   - type: Boolean
     attributes: {id: wolfcrypt_aes_256}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: User
@@ -49,13 +74,25 @@ children:
   - type: Boolean
     attributes: {id: wolfcrypt_aes_cbc}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: User
-        attributes: {value: 'true'}
+        attributes: {value: 'false'}
   - type: Boolean
     attributes: {id: wolfcrypt_aes_ccm}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: User
@@ -63,13 +100,34 @@ children:
   - type: Boolean
     attributes: {id: wolfcrypt_aes_cfb}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: User
         attributes: {value: 'false'}
   - type: Boolean
+    attributes: {id: wolfcrypt_aes_cmac}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Boolean
     attributes: {id: wolfcrypt_aes_ctr}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: User
@@ -77,10 +135,16 @@ children:
   - type: Boolean
     attributes: {id: wolfcrypt_aes_ecb}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: User
-        attributes: {value: 'true'}
+        attributes: {value: 'false'}
   - type: Boolean
     attributes: {id: wolfcrypt_aes_ecb_hw}
     children:
@@ -91,6 +155,12 @@ children:
   - type: Boolean
     attributes: {id: wolfcrypt_aes_gcm}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: User
@@ -105,6 +175,12 @@ children:
   - type: Boolean
     attributes: {id: wolfcrypt_aes_xts}
     children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
     - type: Values
       children:
       - type: User

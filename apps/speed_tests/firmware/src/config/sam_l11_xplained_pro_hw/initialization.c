@@ -106,11 +106,7 @@
 #pragma config NONSECC_TRAM = CLEAR
 #pragma config BOOTROM_USERCRC = 0x8433651e
 
-/* Do not remove the following line when performing Harmony3 code build. 
- * Refer to the crypto library release notes for V3.5. 
- */
-void TC0_TimerCallbackRegister
-    (SYS_TIME_PLIB_CALLBACK callback, uintptr_t context){}
+
 
 
 

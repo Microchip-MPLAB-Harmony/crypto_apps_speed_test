@@ -58,6 +58,7 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
+#define WOLFSSL_AES_SMALL_TABLES
 
 #include "cryptoST/cryptoST_execute.h"
 #include "cryptoST/cryptoSTE_announce.h"

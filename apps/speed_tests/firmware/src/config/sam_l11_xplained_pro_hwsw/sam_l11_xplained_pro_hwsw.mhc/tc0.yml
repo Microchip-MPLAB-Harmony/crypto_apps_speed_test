@@ -127,7 +127,7 @@ children:
       - type: Dynamic
         attributes: {id: tc0, value: 'true'}
       - type: User
-        attributes: {value: 'false'}
+        attributes: {value: 'true'}
   - type: Boolean
     attributes: {id: TC_TIMER_INTENSET_OVF}
     children:

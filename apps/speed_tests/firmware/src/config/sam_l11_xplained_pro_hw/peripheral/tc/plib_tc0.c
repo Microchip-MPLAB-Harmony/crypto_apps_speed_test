@@ -62,6 +62,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
+static TC_TIMER_CALLBACK_OBJ TC0_CallbackObject;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -93,6 +94,9 @@ void TC0_TimerInitialize( void )
     /* Clear all interrupt flags */
     TC0_REGS->COUNT32.TC_INTFLAG = (uint8_t)TC_INTFLAG_Msk;
 
+    TC0_CallbackObject.callback = NULL;
+    /* Enable interrupt*/
+    TC0_REGS->COUNT32.TC_INTENSET = (uint8_t)(TC_INTENSET_MC1_Msk);
 
 
     while((TC0_REGS->COUNT32.TC_SYNCBUSY) != 0U)
@@ -193,11 +197,27 @@ void TC0_Timer32bitCompareSet( uint32_t compare )
 }
 
 
-/* Polling method to check if timer period interrupt flag is set */
-bool TC0_TimerPeriodHasExpired( void )
+/* Register callback function */
+void TC0_TimerCallbackRegister( TC_TIMER_CALLBACK callback, uintptr_t context )
 {
-    uint8_t timer_status = 0U;
-    timer_status = (uint8_t)((TC0_REGS->COUNT32.TC_INTFLAG) & TC_INTFLAG_OVF_Msk);
-    TC0_REGS->COUNT32.TC_INTFLAG = timer_status;
-    return (timer_status != 0U);
+    TC0_CallbackObject.callback = callback;
+
+    TC0_CallbackObject.context = context;
 }
+
+/* Timer Interrupt handler */
+void TC0_TimerInterruptHandler( void )
+{
+    if (TC0_REGS->COUNT32.TC_INTENSET != 0U)
+    {
+        TC_TIMER_STATUS status;
+        status = (TC_TIMER_STATUS) TC0_REGS->COUNT32.TC_INTFLAG;
+        /* Clear interrupt flags */
+        TC0_REGS->COUNT32.TC_INTFLAG = (uint8_t)TC_INTFLAG_Msk;
+        if((status != TC_TIMER_STATUS_NONE) && TC0_CallbackObject.callback != NULL)
+        {
+            TC0_CallbackObject.callback(status, TC0_CallbackObject.context);
+        }
+    }
+}
+
