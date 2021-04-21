@@ -220,7 +220,10 @@ void cryptoSTE_init(cryptoSTE_localData_t * testInformation)
     __conditional_software_breakpoint(numberOfLoadedAPI > 0);
 
     // Zero-out the array to eliminate bus noise.
-    *testInformation = (cryptoSTE_localData_t){0};
-    testInformation->vectorAPI = ST_list;
-    testInformation->numberOfVectorAPI = numberOfLoadedAPI;
+    if (testInformation != 0)
+    {
+        *testInformation = (cryptoSTE_localData_t){0};
+        testInformation->vectorAPI = ST_list;
+        testInformation->numberOfVectorAPI = numberOfLoadedAPI;
+    }
 }

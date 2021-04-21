@@ -192,6 +192,9 @@ void cryptoSTE_announceParameters(cryptoSTE_testExecution_t * config)
  * if an unsuspecting test uses this legacy entry point.
  * It can be removed when all projects build clean.
  */
-__attribute((used))
-void cryptoST_announceParameters(cryptoSTE_parameters_t * parameters)
-{ __conditional_software_breakpoint(0); }
+// __attribute((used))
+// void cryptoST_announceParameters(cryptoSTE_parameters_t * parameters)
+// {
+//     __conditional_software_breakpoint(0);
+    
+// }
